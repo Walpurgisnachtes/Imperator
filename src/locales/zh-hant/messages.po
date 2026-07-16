@@ -1,6 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-07-16 16:53+0800\n"
 "PO-Revision-Date: \n"
 "Last-Translator: \n"
@@ -9,11 +10,20 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 3.9\n"
-"Report-Msgid-Bugs-To: \n"
 "Plural-Forms: \n"
+"X-Generator: Poedit 3.9\n"
+
+#. Continue
+#: src/components/Header.tsx
+msgid "Continue"
+msgstr "繼續上一局"
 
 #. Game name
 #: src/components/Header.tsx
 msgid "Imperator"
 msgstr "英白拉多"
+
+#. Start new game
+#: src/components/Header.tsx
+msgid "Start New Game"
+msgstr "開始新遊戲"

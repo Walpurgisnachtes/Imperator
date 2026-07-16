@@ -1,0 +1,1 @@
+/*eslint-disable*/export const messages=JSON.parse("{\"-Wppuy\":[\"英白拉多\"],\"o2HCZg\":[\"開始新遊戲\"],\"xGVfLh\":[\"繼續上一局\"]}");

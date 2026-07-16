@@ -11,4 +11,5 @@ export default defineConfig({
     },
   ],
   format: formatter({lineNumbers: false}),
+  compileNamespace: "es",
 });

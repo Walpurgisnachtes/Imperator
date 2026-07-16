@@ -13,7 +13,17 @@ msgstr ""
 "Language-Team: \n"
 "Plural-Forms: \n"
 
+#. Continue
+#: src/components/Header.tsx
+msgid "Continue"
+msgstr "Continue"
+
 #. Game name
 #: src/components/Header.tsx
 msgid "Imperator"
 msgstr "Imperator"
+
+#. Start new game
+#: src/components/Header.tsx
+msgid "Start New Game"
+msgstr "Start New Game"
