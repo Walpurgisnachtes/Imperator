@@ -1,0 +1,82 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="256" height="256">
+  <!-- 略帶陰沉的日間天空（稍微降低飽和度） -->
+  <rect x="0" y="0" width="256" height="256" fill="#B0BEC5" />
+  
+  <!-- 黯淡的太陽 -->
+  <circle cx="210" cy="50" r="14" fill="#FFF59D" opacity="0.6" />
+
+  <!-- 荒蕪、缺乏整理的黃綠色山丘 -->
+  <path d="M 0 180 Q 100 155 256 175 L 256 256 L 0 256 Z" fill="#7CB342" />
+  <path d="M 0 200 Q 150 185 256 205 L 256 256 L 0 256 Z" fill="#558B2F" opacity="0.9" />
+
+  <!-- 破損且長滿雜草的石板路 -->
+  <path d="M 120 195 L 90 256 L 150 256 L 135 195 Z" fill="#90A4AE" />
+  <!-- 路面裂縫與雜草 -->
+  <path d="M 110 215 L 115 225 L 112 235" fill="none" stroke="#37474F" stroke-width="1" />
+  <path d="M 125 220 Q 128 210 122 205" fill="none" stroke="#2E7D32" stroke-width="1.2" />
+  <path d="M 105 240 Q 102 230 108 228" fill="none" stroke="#2E7D32" stroke-width="1.2" />
+
+  <!-- 羅馬式石造小屋 (荒廢破損版) -->
+  
+  <!-- 1. 左側圓柱形防禦塔樓 (歪斜與破損) -->
+  <!-- 塔身 -->
+  <rect x="75" y="110" width="34" height="90" fill="#CFD8DC" stroke="#455A64" stroke-width="1.5" />
+  <!-- 石磚紋理與斑駁痕跡 -->
+  <line x1="75" y1="130" x2="109" y2="130" stroke="#90A4AE" stroke-width="0.8" stroke-dasharray="2,8" />
+  <line x1="75" y1="155" x2="109" y2="155" stroke="#90A4AE" stroke-width="0.8" stroke-dasharray="4,6" />
+  <!-- 牆面裂縫 (Crack) -->
+  <path d="M 80 140 L 85 148 L 82 158" fill="none" stroke="#37474F" stroke-width="1.2" />
+  <path d="M 102 170 L 98 178 L 100 185" fill="none" stroke="#37474F" stroke-width="1.2" />
+  
+  <!-- 塔頂錐形圓屋頂 (傾斜且破損) -->
+  <!-- 原頂點是 (92,65)，現在往左偏到 (88,68) 造成歪斜感 -->
+  <polygon points="71,114 88,68 113,111" fill="#BF360C" stroke="#5D4037" stroke-width="1.5" />
+  <!-- 屋頂破損缺口 -->
+  <polygon points="100,90 104,88 102,94" fill="#B0BEC5" /> <!-- 露出背景天空色 -->
+  
+  <!-- 塔樓窄窗 -->
+  <path d="M 88 135 A 4 4 0 0 1 96 135 L 96 150 L 88 150 Z" fill="#37474F" stroke="#455A64" stroke-width="1" />
+
+  <!-- 2. 右側主屋 (Main Hall) -->
+  <!-- 主屋牆面 -->
+  <rect x="109" y="130" width="75" height="70" fill="#B0BEC5" stroke="#455A64" stroke-width="1.5" />
+  <!-- 牆面大裂縫與汙漬 -->
+  <path d="M 165 135 L 160 145 L 163 155 L 158 162" fill="none" stroke="#37474F" stroke-width="1.2" />
+  <line x1="109" y1="175" x2="184" y2="175" stroke="#78909C" stroke-width="0.8" stroke-dasharray="3,9" />
+
+  <!-- 主屋重型雙面屋頂 (邊緣塌陷破損) -->
+  <!-- 在多邊形邊緣製造塌陷感 -->
+  <polygon points="102,133 146,95 165,112 170,115 173,113 190,132" fill="#D84315" stroke="#D84315" stroke-width="1.5" />
+  <polygon points="102,133 146,95 165,112 170,115 173,113 190,132" fill="none" stroke="#5D4037" stroke-width="1.5" />
+  <!-- 露出破洞 -->
+  <path d="M 125 115 Q 128 118 123 121 Z" fill="#B0BEC5" />
+
+  <!-- 歪斜的羅馬式半圓拱門 -->
+  <!-- 拱門外框 (部分石塊脫落) -->
+  <path d="M 120 200 L 120 174 A 13 13 0 0 1 144 173" fill="none" stroke="#78909C" stroke-width="2.5" />
+  <!-- 歪斜的木門 (門軸壞了往右下傾斜) -->
+  <path d="M 125 200 L 122 176 A 10 10 0 0 1 141 174 L 145 198 Z" fill="#5D4037" stroke="#3E2723" stroke-width="1.5" />
+  <!-- 門縫與破損 -->
+  <line x1="133" y1="180" x2="135" y2="198" stroke="#3E2723" stroke-width="1" />
+
+  <!-- 殘破的雙聯拱窗 (Bifora Window) -->
+  <!-- 外拱結構 -->
+  <path d="M 154 162 A 8 8 0 0 1 170 162 Z" fill="#37474F" />
+  <!-- 左窗正常，右窗破碎 (填滿深灰色代表空洞) -->
+  <path d="M 155 162 L 155 152 A 3 3 0 0 1 161 152 L 161 162 Z" fill="#E3F2FD" stroke="#455A64" stroke-width="0.8" />
+  <path d="M 163 162 L 163 152 A 3 3 0 0 1 169 152 L 169 162 Z" fill="#37474F" stroke="#455A64" stroke-width="0.8" />
+  <!-- 中間的小石柱 (稍微歪斜) -->
+  <rect x="160.5" y="152" width="2" height="10" fill="#78909C" transform="rotate(5, 161, 157)" />
+
+  <!-- 3. 野生植物與落葉 (荒廢感) -->
+  <!-- 屋頂上冒出的雜草 -->
+  <path d="M 143 95 Q 140 85 145 83 Q 148 88 146 95" fill="none" stroke="#2E7D32" stroke-width="1.2" />
+  <path d="M 147 95 Q 152 87 150 84" fill="none" stroke="#2E7D32" stroke-width="1.2" />
+  
+  <!-- 牆角肆意生長、疏於修剪的枯黃灌木 -->
+  <path d="M 58 200 Q 52 182 68 182 Q 78 178 82 188 Q 94 185 88 200 Z" fill="#558B2F" />
+  <path d="M 178 200 Q 172 188 183 183 Q 195 188 188 200 Z" fill="#558B2F" />
+  
+  <!-- 攀爬在牆上的藤蔓 -->
+  <path d="M 110 200 Q 106 185 112 175 T 108 160" fill="none" stroke="#33691E" stroke-width="1" />
+</svg>

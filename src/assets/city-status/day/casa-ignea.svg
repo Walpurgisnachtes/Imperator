@@ -1,0 +1,90 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="256" height="256">
+  <!-- 晴朗但被煙霧籠罩的日間天空背景 -->
+  <rect x="0" y="0" width="256" height="256" fill="#A0E0FF" />
+  
+  <!-- 淡淡的火光與煙塵紅暈（日間環境光） -->
+  <circle cx="140" cy="120" r="90" fill="#FF9100" opacity="0.15" filter="blur(8px)" />
+  
+  <!-- 溫暖的太陽（部分被滾滾濃煙遮擋） -->
+  <circle cx="210" cy="50" r="16" fill="#FFF176" opacity="0.9" />
+
+  <!-- 被火光照亮的翠綠山丘 -->
+  <path d="M 0 180 Q 100 155 256 175 L 256 256 L 0 256 Z" fill="#4CAF50" />
+  <!-- 火光在草地上的暖橘色投影 -->
+  <path d="M 60 195 Q 130 170 200 195 L 256 256 L 0 256 Z" fill="#FF9100" opacity="0.15" />
+  <path d="M 0 200 Q 150 185 256 205 L 256 256 L 0 256 Z" fill="#388E3C" opacity="0.8" />
+
+  <!-- 石板小徑 -->
+  <path d="M 120 195 L 90 256 L 150 256 L 135 195 Z" fill="#CFD8DC" />
+
+  <!-- 日間黑煙與灰燼（遮擋部分太陽與天空） -->
+  <circle cx="130" cy="70" r="20" fill="#455A64" opacity="0.8" />
+  <circle cx="155" cy="55" r="24" fill="#37474F" opacity="0.7" />
+  <circle cx="105" cy="65" r="16" fill="#546E7A" opacity="0.65" />
+  <circle cx="180" cy="45" r="22" fill="#78909C" opacity="0.5" />
+
+  <!-- 羅馬式石造小屋 (日間火災版) -->
+  
+  <!-- 1. 左側圓柱形防禦塔樓 -->
+  <!-- 塔身（被火光映出暖色調的石牆） -->
+  <rect x="75" y="110" width="34" height="90" fill="#E0E0E0" stroke="#455A64" stroke-width="1.5" />
+  <!-- 石磚紋理 -->
+  <line x1="75" y1="130" x2="109" y2="130" stroke="#B0BEC5" stroke-width="0.8" stroke-dasharray="2,8" />
+  <line x1="75" y1="155" x2="109" y2="155" stroke="#B0BEC5" stroke-width="0.8" stroke-dasharray="4,6" />
+  <!-- 牆面裂縫 -->
+  <path d="M 80 140 L 85 148 L 82 158" fill="none" stroke="#37474F" stroke-width="1.2" />
+  
+  <!-- 塔頂錐形圓屋頂 (傾斜且破損) -->
+  <polygon points="71,114 88,68 113,111" fill="#D84315" stroke="#5D4037" stroke-width="1.5" />
+  <polygon points="100,90 104,88 102,94" fill="#A0E0FF" /> <!-- 露出背景天空色 -->
+
+  <!-- 塔樓窄窗（內部著火，噴出火舌） -->
+  <path d="M 88 135 A 4 4 0 0 1 96 135 L 96 150 L 88 150 Z" fill="#FF3D00" stroke="#455A64" stroke-width="1" />
+  <path d="M 91 142 Q 84 138 92 128 Q 95 136 93 144 Z" fill="#FFEA00" />
+
+  <!-- 2. 右側主屋 -->
+  <!-- 主屋牆面（部分受火光與濃煙熏黑，部分受火光照亮） -->
+  <rect x="109" y="130" width="75" height="70" fill="#CFD8DC" stroke="#455A64" stroke-width="1.5" />
+  <!-- 被火光照亮與熏黑的漸變覆蓋 -->
+  <rect x="109" y="130" width="75" height="70" fill="#FF9100" opacity="0.15" />
+  <path d="M 165 135 L 160 145 L 163 155 L 158 162" fill="none" stroke="#37474F" stroke-width="1.2" />
+
+  <!-- 屋頂主火源（烈火燃燒） -->
+  <!-- 外層紅火 -->
+  <path d="M 110 115 Q 125 55 140 70 Q 155 50 165 85 Q 180 75 175 110 Z" fill="#FF3D00" />
+  <!-- 中層橙火 -->
+  <path d="M 120 115 Q 130 68 142 80 Q 152 65 160 92 Q 170 85 168 110 Z" fill="#FF9100" />
+  <!-- 內層黃火 -->
+  <path d="M 128 115 Q 135 80 144 90 Q 150 78 155 100 Q 160 95 158 110 Z" fill="#FFEA00" />
+
+  <!-- 主屋重型雙面屋頂 (邊緣塌陷，部分被燒黑) -->
+  <polygon points="102,133 146,95 165,112 170,115 173,113 190,132" fill="#5D4037" stroke="#3E2723" stroke-width="1.5" />
+  <path d="M 125 115 Q 128 118 123 121 Z" fill="#FFEA00" /> <!-- 屋頂破洞透出火光 -->
+
+  <!-- 歪斜的半圓拱門 -->
+  <path d="M 120 200 L 120 174 A 13 13 0 0 1 144 173" fill="none" stroke="#78909C" stroke-width="2.5" />
+  <!-- 歪斜的木門 -->
+  <path d="M 125 200 L 122 176 A 10 10 0 0 1 141 174 L 145 198 Z" fill="#8D6E63" stroke="#5D4037" stroke-width="1.5" />
+  <line x1="133" y1="180" x2="135" y2="198" stroke="#5D4037" stroke-width="1" />
+
+  <!-- 殘破的雙聯拱窗 (Bifora Window) -->
+  <path d="M 154 162 A 8 8 0 0 1 170 162 Z" fill="#37474F" />
+  <!-- 窗戶內部映出大火的紅光 -->
+  <path d="M 155 162 L 155 152 A 3 3 0 0 1 161 152 L 161 162 Z" fill="#FF3D00" stroke="#37474F" stroke-width="0.8" />
+  <path d="M 163 162 L 163 152 A 3 3 0 0 1 169 152 L 169 162 Z" fill="#FF9100" stroke="#37474F" stroke-width="0.8" />
+  <rect x="160.5" y="152" width="2" height="10" fill="#546E7A" transform="rotate(5, 161, 157)" />
+
+  <!-- 3. 野生植物與飄散的火花 -->
+  <!-- 牆角荒蕪灌木（受熱浪與火光影響呈深褐綠色） -->
+  <path d="M 58 200 Q 52 182 68 182 Q 78 178 82 188 Q 94 185 88 200 Z" fill="#3E4F24" />
+  <path d="M 178 200 Q 172 188 183 183 Q 195 188 188 200 Z" fill="#3E4F24" />
+  
+  <!-- 攀爬在牆上的枯萎藤蔓 -->
+  <path d="M 110 200 Q 106 185 112 175 T 108 160" fill="none" stroke="#27120F" stroke-width="1" />
+
+  <!-- 日間天空中飄散的火星 -->
+  <circle cx="110" cy="50" r="1.2" fill="#FFEA00" />
+  <circle cx="180" cy="60" r="1" fill="#FF9100" />
+  <circle cx="195" cy="85" r="1.5" fill="#FFEA00" />
+  <circle cx="150" cy="45" r="1" fill="#FF3D00" />
+</svg>
