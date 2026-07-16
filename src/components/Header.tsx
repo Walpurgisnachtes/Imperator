@@ -1,12 +1,10 @@
 import { Trans } from "@lingui/react/macro";
-import React, { useState } from "react";
+import React from "react";
 
 import LanguageIcon from "../assets/language.svg?react";
 import { dynamicActivate } from "../i18n";
 
 export const Header: React.FC = () => {
-  const [isOpen, setIsOpen] = useState<boolean>(false);
-
   return (
     <header className="sticky top-0 z-50 w-full border-b border-slate-800/80 bg-slate-950/80 backdrop-blur-md">
       <div className="mx-auto flex max-w-7xl h-16 items-center justify-between px-4 sm:px-6 lg:px-8">

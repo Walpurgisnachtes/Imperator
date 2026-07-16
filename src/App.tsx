@@ -1,13 +1,9 @@
-import { useState } from 'react'
-
 import './App.css'
 
 import { Header } from './components/Header'
 
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
     // bg-slate-950 是午夜風的主背景，搭配圓弧狀的漸層微光（radial-gradient）能讓整體質感再升級
     <div className="min-h-screen bg-slate-950 text-slate-100 relative overflow-hidden">
