@@ -1,0 +1,16 @@
+{
+  "name": "imperator",
+  "version": "1.0.0",
+  "description": "A RPG that the player plays the role as the imperator to govern the empire.",
+  "keywords": [
+    "Game",
+    "RPG"
+  ],
+  "license": "MIT",
+  "author": "Walpurgisnachtes",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}
