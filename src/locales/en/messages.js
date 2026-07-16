@@ -1,1 +1,1 @@
-/*eslint-disable*/module.exports={messages:JSON.parse("{\"-Wppuy\":[\"Imperator\"]}")};
+/*eslint-disable*/export const messages = JSON.parse("{\"-Wppuy\":[\"Imperator\"]}");

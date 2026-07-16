@@ -1,1 +1,1 @@
-/*eslint-disable*/module.exports={messages:JSON.parse("{\"-Wppuy\":[\"英白拉多\"]}")};
+/*eslint-disable*/export const messages = JSON.parse("{\"-Wppuy\":[\"英白拉多\"]}");
