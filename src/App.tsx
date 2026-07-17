@@ -1,6 +1,7 @@
 import './App.css'
 
 import { Header } from './components/Header'
+import { GameContentContainer } from './components/GameContentContainer';
 
 
 function App() {
@@ -14,8 +15,8 @@ function App() {
 
       <Header />
       
-      <main className="relative z-10 mx-auto max-w-7xl px-4 py-20 sm:px-6 lg:px-8">
-        {/* 你的頁面內容 */}
+      <main className="relative z-10 px-12 py-20">
+        <GameContentContainer />
       </main>
     </div>
   );
