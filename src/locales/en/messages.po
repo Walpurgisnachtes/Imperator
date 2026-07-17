@@ -139,8 +139,16 @@ msgstr "Current amount of gold in the treasury.\n"
 "Buildings, units, and other expenses are paid from the treasury."
 
 #: src/components/GameContentContainer.tsx
-msgid "Current culture influence of the city"
-msgstr "Current culture influence of the city"
+#~ msgid "Current culture influence of the city"
+#~ msgstr "Current culture influence of the city"
+
+#: src/components/GameContentContainer.tsx
+msgid "Current culture influence of the city.\n"
+"Affects the city's ability to shape societal values and norms.\n"
+"High culture influence can lead to increased unity and citizen engagement."
+msgstr "Current culture influence of the city.\n"
+"Affects the city's ability to shape societal values and norms.\n"
+"High culture influence can lead to increased unity and citizen engagement."
 
 #: src/components/GameContentContainer.tsx
 #~ msgid "Current culture strength of the city"
@@ -161,12 +169,28 @@ msgstr "Current food supply level of the city.\n"
 "On the other hand, if the food supply is abundant, the city may experience population growth."
 
 #: src/components/GameContentContainer.tsx
-msgid "Current military strength of the city"
-msgstr "Current military strength of the city"
+#~ msgid "Current military strength of the city"
+#~ msgstr "Current military strength of the city"
 
 #: src/components/GameContentContainer.tsx
-msgid "Current political influence of the city"
-msgstr "Current political influence of the city"
+msgid "Current military strength of the city.\n"
+"Affects the city's ability to defend itself and project power.\n"
+"High military strength can deter potential aggressors and enable successful military campaigns."
+msgstr "Current military strength of the city.\n"
+"Affects the city's ability to defend itself and project power.\n"
+"High military strength can deter potential aggressors and enable successful military campaigns."
+
+#: src/components/GameContentContainer.tsx
+#~ msgid "Current political influence of the city"
+#~ msgstr "Current political influence of the city"
+
+#: src/components/GameContentContainer.tsx
+msgid "Current political influence of the city.\n"
+"Affects the city's right to speak and participate in decision-making among the whole empire.\n"
+"High political influence will lead to increased representation and influence in the empire's governance."
+msgstr "Current political influence of the city.\n"
+"Affects the city's right to speak and participate in decision-making among the whole empire.\n"
+"High political influence will lead to increased representation and influence in the empire's governance."
 
 #: src/components/GameContentContainer.tsx
 #~ msgid "Current political strength of the city"
@@ -185,8 +209,16 @@ msgstr "Current productivity of the city.\n"
 "Consumed by production activities, units, and other expenses."
 
 #: src/components/GameContentContainer.tsx
-msgid "Current religion influence of the city"
-msgstr "Current religion influence of the city"
+#~ msgid "Current religion influence of the city"
+#~ msgstr "Current religion influence of the city"
+
+#: src/components/GameContentContainer.tsx
+msgid "Current religion influence of the city.\n"
+"Affects the city's ability to shape and spread religious practices and beliefs.\n"
+"High religion influence can lead to increased stability and effectiveness in spreading religion to nearby cities."
+msgstr "Current religion influence of the city.\n"
+"Affects the city's ability to shape and spread religious practices and beliefs.\n"
+"High religion influence can lead to increased stability and effectiveness in spreading religion to nearby cities."
 
 #: src/components/GameContentContainer.tsx
 #~ msgid "Current religion strength of the city"
@@ -207,12 +239,28 @@ msgstr "Current stability level of the city.\n"
 "High stability can lead to increased growth and prosperity."
 
 #: src/components/GameContentContainer.tsx
-msgid "Current technology strength of the city"
-msgstr "Current technology strength of the city"
+#~ msgid "Current technology strength of the city"
+#~ msgstr "Current technology strength of the city"
 
 #: src/components/GameContentContainer.tsx
-msgid "Current trade influence of the city"
-msgstr "Current trade influence of the city"
+msgid "Current technology strength of the city.\n"
+"Affects the whole empire's ability to innovate and advance.\n"
+"High technology strength can lead to increased efficiency in research and productivity generation."
+msgstr "Current technology strength of the city.\n"
+"Affects the whole empire's ability to innovate and advance.\n"
+"High technology strength can lead to increased efficiency in research and productivity generation."
+
+#: src/components/GameContentContainer.tsx
+#~ msgid "Current trade influence of the city"
+#~ msgstr "Current trade influence of the city"
+
+#: src/components/GameContentContainer.tsx
+msgid "Current trade influence of the city.\n"
+"Affects the city's ability to create fortune, generate wealth, and engage in commerce.\n"
+"High trade influence can lead to increased income and economic growth."
+msgstr "Current trade influence of the city.\n"
+"Affects the city's ability to create fortune, generate wealth, and engage in commerce.\n"
+"High trade influence can lead to increased income and economic growth."
 
 #: src/components/GameContentContainer.tsx
 #~ msgid "Current trade strength of the city"
