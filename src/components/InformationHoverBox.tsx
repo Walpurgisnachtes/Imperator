@@ -1,5 +1,6 @@
 import React from "react";
 import type { Information } from "../types/information";
+import { CityNameGenerator } from "../data/static-data/city-names";
 
 interface InformationHoverBoxProps {
   item: Information;
@@ -23,6 +24,10 @@ export const InformationHoverBox: React.FC<InformationHoverBoxProps> = ({
     ));
 
   const translateY = position.y < window.innerHeight / 2 ? "-100%" : "-150%";
+  let value =
+    item.id == "city-name"
+      ? CityNameGenerator.getCityName(Number(item.value))
+      : item.value;
 
   return (
     <div
@@ -33,8 +38,9 @@ export const InformationHoverBox: React.FC<InformationHoverBoxProps> = ({
         transform: `translate(calc(-3vw), ${translateY})`,
       }}
     >
-      <p className="text-sm text-left font-bold border-b border-slate-700 pb-2">
-        {item.label}
+      <p className="flex flex-row justify-between text-sm text-left font-bold border-b border-slate-700 pb-2">
+        <span>{item.label}</span>
+        <span>{value}</span>
       </p>
       <p className="text-sm text-left pt-2">{itemDescription}</p>
     </div>
