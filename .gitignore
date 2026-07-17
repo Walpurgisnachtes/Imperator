@@ -168,5 +168,3 @@ dist-ssr
 *.sw?
 
 .vscode
-
-package-lock.json
