@@ -60,16 +60,18 @@ export const InformationColumn: React.FC<InformationColumnProps> = ({
   };
 
   return (
-    <div className="relative flex flex-col gap-4 w-xs rounded-xl border border-slate-700/50 bg-slate-800/40 p-4 backdrop-blur-sm">
+    <div className="relative flex flex-col gap-4 w-2xs max-h-[80vh] rounded-xl border border-slate-700/50 bg-slate-800/40 p-4 backdrop-blur-sm">
       <h3 className="text-lg font-bold text-slate-100 border-b border-slate-700 pb-2">
         {title}
       </h3>
       {statusImage && (
         <div className="flex items-center justify-center border-b border-slate-700 pb-4">
-          {React.createElement(statusImage, {})}
+          {React.createElement(statusImage, {
+            className: "h-auto xl:w-1/2",
+          })}
         </div>
       )}
-      <div id="information-list" className="flex flex-col gap-3 overflow-y-scroll max-h-138">
+      <div id="information-list" className="flex flex-col gap-3 overflow-y-scroll">
         <ul
           className={`flex flex-col gap-3 ${items.middle.length > 0 ? "border-b border-slate-700" : ""} pb-2`}
         >
