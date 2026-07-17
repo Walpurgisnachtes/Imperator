@@ -13,17 +13,393 @@ msgstr ""
 "Plural-Forms: \n"
 "X-Generator: Poedit 3.9\n"
 
+#. placeholder {0}: item.value
+#~ msgid "{0}"
+#~ msgstr "{0}"
+
+#~ msgid "{value}"
+#~ msgstr "{value}"
+
+#: src/data/static-data/city-names.ts
+msgid "Achaia"
+msgstr "亞該亞"
+
+#: src/data/static-data/city-names.ts
+msgid "Aegyptus"
+msgstr "埃及"
+
+#: src/data/static-data/city-names.ts
+msgid "Africa"
+msgstr "阿非利加"
+
+#: src/data/static-data/city-names.ts
+msgid "Alpes Cottiae"
+msgstr "科蒂埃阿爾卑斯"
+
+#: src/data/static-data/city-names.ts
+msgid "Alpes Graiae"
+msgstr "格賴埃阿爾卑斯"
+
+#: src/data/static-data/city-names.ts
+msgid "Alpes Maritimae"
+msgstr "濱海阿爾卑斯"
+
+#: src/data/static-data/city-names.ts
+msgid "Alpes Poeninae"
+msgstr "布匿阿爾卑斯"
+
+#: src/data/static-data/city-names.ts
+msgid "Aquitania"
+msgstr "阿基坦"
+
+#: src/data/static-data/city-names.ts
+msgid "Arabia"
+msgstr "阿拉伯"
+
+#: src/data/static-data/city-names.ts
+msgid "Armenia"
+msgstr "亞美尼亞"
+
+#: src/data/static-data/city-names.ts
+msgid "Asia"
+msgstr "亞細亞"
+
+#: src/data/static-data/city-names.ts
+msgid "Assyria"
+msgstr "亞述"
+
+#: src/data/static-data/city-names.ts
+msgid "Baetica"
+msgstr "貝提卡"
+
+#: src/data/static-data/city-names.ts
+msgid "Belgica"
+msgstr "比利時"
+
+#: src/data/static-data/city-names.ts
+msgid "Bithynia"
+msgstr "比提尼亞"
+
+#: src/data/static-data/city-names.ts
+msgid "Britannia"
+msgstr "不列顛尼亞"
+
+#. placeholder {0}: building.name
+#. placeholder {1}: building.id
+#. placeholder {2}: building.activeRecipeIndex
+#: src/scripts/production-solver.ts
+msgid "Building [{0} (ID: {1})] produced resources using recipe [{2}]"
+msgstr "建置 [{0} (ID: {1})] 時，使用配方 [{2}] 產生了資源"
+
+#: src/data/static-data/city-names.ts
+msgid "Cappadocia"
+msgstr "卡帕多西亞"
+
+#: src/data/static-data/city-names.ts
+msgid "Cilicia"
+msgstr "西利西亞"
+
+#: src/components/GameContentContainer.tsx
+msgid "City Overview"
+msgstr "城市概覽"
+
 #. Continue
 #: src/components/Header.tsx
 msgid "Continue"
 msgstr "繼續上一局"
+
+#: src/data/static-data/city-names.ts
+msgid "Corsica"
+msgstr "科西嘉"
+
+#: src/data/static-data/city-names.ts
+msgid "Crete"
+msgstr "克里特"
+
+#: src/components/GameContentContainer.tsx
+msgid "Culture Influence"
+msgstr "文化影響力"
+
+#: src/components/GameContentContainer.tsx
+#~ msgid "Current amount of gold in the treasury"
+#~ msgstr "城市中的黃金儲備量"
+
+#: src/components/GameContentContainer.tsx
+msgid "Current amount of gold in the treasury.\n"
+"Affects the city's ability to maintain and expand its infrastructure.\n"
+"Buildings, units, and other expenses are paid from the treasury."
+msgstr ""
+
+#: src/components/GameContentContainer.tsx
+msgid "Current culture influence of the city"
+msgstr "城市中的文化影響力"
+
+#: src/components/GameContentContainer.tsx
+#~ msgid "Current food supply level of the city"
+#~ msgstr "城市糧食供應水平"
+
+#: src/components/GameContentContainer.tsx
+msgid "Current food supply level of the city.\n"
+"Determines the city's ability to sustain its population.\n"
+"If the food supply is insufficient, the city may experience population decline.\n"
+"On the other hand, if the food supply is abundant, the city may experience population growth."
+msgstr ""
+
+#: src/components/GameContentContainer.tsx
+msgid "Current military strength of the city"
+msgstr "城市中的軍力"
+
+#: src/components/GameContentContainer.tsx
+msgid "Current political influence of the city"
+msgstr "城市中的政治影響力"
+
+#: src/components/GameContentContainer.tsx
+#~ msgid "Current productivity of the city"
+#~ msgstr "城市生產力"
+
+#: src/components/GameContentContainer.tsx
+msgid "Current productivity of the city.\n"
+"Affects the city's ability to produce goods and services.\n"
+"Consumed by production activities, units, and other expenses."
+msgstr ""
+
+#: src/components/GameContentContainer.tsx
+msgid "Current religion influence of the city"
+msgstr "城市中的宗教影響力"
+
+#: src/components/GameContentContainer.tsx
+#~ msgid "Current stability level of the city"
+#~ msgstr "城市穩定程度"
+
+#: src/components/GameContentContainer.tsx
+msgid "Current stability level of the city.\n"
+"Affects the city's overall performance and citizen satisfaction.\n"
+"Low stability can lead to unrest, riots, and decreased productivity.\n"
+"High stability can lead to increased growth and prosperity."
+msgstr ""
+
+#: src/components/GameContentContainer.tsx
+msgid "Current technology strength of the city"
+msgstr "城市中的科技強度"
+
+#: src/components/GameContentContainer.tsx
+msgid "Current trade influence of the city"
+msgstr "城市中的貿易影響力"
+
+#: src/data/static-data/city-names.ts
+msgid "Cyprus"
+msgstr "賽普勒斯"
+
+#: src/data/static-data/city-names.ts
+msgid "Cyrenaica"
+msgstr "昔蘭尼加"
+
+#: src/data/static-data/city-names.ts
+msgid "Dacia"
+msgstr "達契亞"
+
+#: src/data/static-data/city-names.ts
+msgid "Dalmatia"
+msgstr "達爾馬提亞"
+
+#: src/data/static-data/city-names.ts
+msgid "Epirus"
+msgstr "伊庇魯斯"
+
+#: src/components/GameContentContainer.tsx
+msgid "Food Supply"
+msgstr "食物"
+
+#: src/data/static-data/city-names.ts
+msgid "Galatia"
+msgstr "加拉太"
+
+#~ msgid "Gallia Aquitania"
+#~ msgstr "阿基坦高盧"
+
+#~ msgid "Gallia Belgica"
+#~ msgstr "比利時高盧"
+
+#~ msgid "Gallia Lugdunensis"
+#~ msgstr "盧格敦高盧"
+
+#~ msgid "Gallia Narbonensis"
+#~ msgstr "納博訥高盧"
+
+#. Game Content
+#: src/components/GameContent.tsx
+msgid "Game Content"
+msgstr "遊戲內容"
+
+#: src/data/static-data/city-names.ts
+msgid "Germania Inferior"
+msgstr "下日耳曼尼亞"
+
+#: src/data/static-data/city-names.ts
+msgid "Germania Superior"
+msgstr "上日耳曼尼亞"
+
+#~ msgid "Hispania Baetica"
+#~ msgstr "貝提卡"
+
+#~ msgid "Hispania Lusitania"
+#~ msgstr "盧西塔尼亞"
+
+#~ msgid "Hispania Tarraconensis"
+#~ msgstr "塔拉科"
 
 #. Game name
 #: src/components/Header.tsx
 msgid "Imperator"
 msgstr "英白拉多"
 
+#: src/data/static-data/city-names.ts
+msgid "Italia"
+msgstr "義大利亞"
+
+#: src/data/static-data/city-names.ts
+msgid "Iudaea"
+msgstr "猶太"
+
+#: src/data/static-data/city-names.ts
+msgid "Lugdunensis"
+msgstr "盧格敦"
+
+#: src/data/static-data/city-names.ts
+msgid "Lusitania"
+msgstr "盧西塔尼亞"
+
+#: src/data/static-data/city-names.ts
+msgid "Lycia"
+msgstr "呂基亞"
+
+#: src/data/static-data/city-names.ts
+msgid "Macedonia"
+msgstr "馬其頓"
+
+#: src/data/static-data/city-names.ts
+msgid "Mauretania Caesariensis"
+msgstr "凱撒茅利塔尼亞"
+
+#: src/data/static-data/city-names.ts
+msgid "Mauretania Tingitana"
+msgstr "廷吉塔納茅利塔尼亞"
+
+#: src/data/static-data/city-names.ts
+msgid "Mesopotamia"
+msgstr "美索不達米亞"
+
+#: src/components/GameContentContainer.tsx
+msgid "Military Strength"
+msgstr "軍力"
+
+#: src/data/static-data/city-names.ts
+msgid "Moesia Inferior"
+msgstr "下默西亞"
+
+#: src/data/static-data/city-names.ts
+msgid "Moesia Superior"
+msgstr "上默西亞"
+
+#: src/components/GameContentContainer.tsx
+msgid "Name"
+msgstr "名稱"
+
+#: src/components/GameContentContainer.tsx
+#~ msgid "Name of the city"
+#~ msgstr "城市名稱"
+
+#: src/data/static-data/city-names.ts
+msgid "Narbonensis"
+msgstr "納博訥"
+
+#: src/data/static-data/city-names.ts
+msgid "Noricum"
+msgstr "諾里庫姆"
+
+#: src/data/static-data/city-names.ts
+msgid "Pamphylia"
+msgstr "潘菲利亞"
+
+#: src/data/static-data/city-names.ts
+msgid "Pannonia Inferior"
+msgstr "下潘諾尼亞"
+
+#: src/data/static-data/city-names.ts
+msgid "Pannonia Superior"
+msgstr "上潘諾尼亞"
+
+#: src/components/GameContentContainer.tsx
+msgid "Political Influence"
+msgstr "政治影響力"
+
+#: src/data/static-data/city-names.ts
+msgid "Pontus"
+msgstr "本都"
+
+#: src/components/GameContentContainer.tsx
+msgid "Population"
+msgstr "人口"
+
+#: src/components/GameContentContainer.tsx
+msgid "Productivity"
+msgstr "生產力"
+
+#: src/data/static-data/city-names.ts
+msgid "Raetia"
+msgstr "雷蒂亞"
+
+#: src/components/GameContentContainer.tsx
+msgid "Religion Influence"
+msgstr "宗教影響力"
+
+#: src/data/static-data/city-names.ts
+msgid "Sardinia"
+msgstr "薩丁尼亞"
+
+#: src/data/static-data/city-names.ts
+msgid "Sicilia"
+msgstr "西西里"
+
+#: src/components/GameContentContainer.tsx
+msgid "Stability"
+msgstr "穩定性"
+
 #. Start new game
 #: src/components/Header.tsx
 msgid "Start New Game"
 msgstr "開始新遊戲"
+
+#: src/data/static-data/city-names.ts
+msgid "Syria"
+msgstr "敍利亞"
+
+#: src/data/static-data/city-names.ts
+msgid "Tarraconensis"
+msgstr "塔拉科"
+
+#: src/components/GameContentContainer.tsx
+msgid "Technology Strength"
+msgstr "科技強度"
+
+#: src/data/static-data/city-names.ts
+msgid "Thracia"
+msgstr "色雷斯"
+
+#: src/components/GameContentContainer.tsx
+#~ msgid "Total population of the city"
+#~ msgstr "城市中的人口總數"
+
+#: src/components/GameContentContainer.tsx
+msgid "Total population of the city.\n"
+"Basic unit of measurement for the city's size and growth.\n"
+"Affects everything from resource production to military strength."
+msgstr ""
+
+#: src/components/GameContentContainer.tsx
+msgid "Trade Influence"
+msgstr "貿易影響力"
+
+#: src/components/GameContentContainer.tsx
+msgid "Treasury"
+msgstr "金幣"

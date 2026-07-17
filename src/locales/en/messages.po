@@ -13,17 +13,454 @@ msgstr ""
 "Language-Team: \n"
 "Plural-Forms: \n"
 
+#. placeholder {0}: item.value
+#: src/components/InformationColumn.tsx
+#~ msgid "{0}"
+#~ msgstr "{0}"
+
+#: src/components/InformationColumn.tsx
+#~ msgid "{value}"
+#~ msgstr "{value}"
+
+#: src/data/static-data/city-names.ts
+msgid "Achaia"
+msgstr "Achaia"
+
+#: src/data/static-data/city-names.ts
+msgid "Aegyptus"
+msgstr "Aegyptus"
+
+#: src/data/static-data/city-names.ts
+msgid "Africa"
+msgstr "Africa"
+
+#: src/data/static-data/city-names.ts
+msgid "Alpes Cottiae"
+msgstr "Alpes Cottiae"
+
+#: src/data/static-data/city-names.ts
+msgid "Alpes Graiae"
+msgstr "Alpes Graiae"
+
+#: src/data/static-data/city-names.ts
+msgid "Alpes Maritimae"
+msgstr "Alpes Maritimae"
+
+#: src/data/static-data/city-names.ts
+msgid "Alpes Poeninae"
+msgstr "Alpes Poeninae"
+
+#: src/data/static-data/city-names.ts
+msgid "Aquitania"
+msgstr "Aquitania"
+
+#: src/data/static-data/city-names.ts
+msgid "Arabia"
+msgstr "Arabia"
+
+#: src/data/static-data/city-names.ts
+msgid "Armenia"
+msgstr "Armenia"
+
+#: src/data/static-data/city-names.ts
+msgid "Asia"
+msgstr "Asia"
+
+#: src/data/static-data/city-names.ts
+msgid "Assyria"
+msgstr "Assyria"
+
+#: src/data/static-data/city-names.ts
+msgid "Baetica"
+msgstr "Baetica"
+
+#: src/data/static-data/city-names.ts
+msgid "Belgica"
+msgstr "Belgica"
+
+#: src/data/static-data/city-names.ts
+msgid "Bithynia"
+msgstr "Bithynia"
+
+#: src/data/static-data/city-names.ts
+msgid "Britannia"
+msgstr "Britannia"
+
+#. placeholder {0}: building.name
+#. placeholder {1}: building.id
+#. placeholder {2}: building.activeRecipeIndex
+#: src/scripts/production-solver.ts
+msgid "Building [{0} (ID: {1})] produced resources using recipe [{2}]"
+msgstr "Building [{0} (ID: {1})] produced resources using recipe [{2}]"
+
+#: src/data/static-data/city-names.ts
+msgid "Cappadocia"
+msgstr "Cappadocia"
+
+#: src/data/static-data/city-names.ts
+msgid "Cilicia"
+msgstr "Cilicia"
+
+#: src/components/GameContentContainer.tsx
+msgid "City Overview"
+msgstr "City Overview"
+
 #. Continue
 #: src/components/Header.tsx
 msgid "Continue"
 msgstr "Continue"
+
+#: src/data/static-data/city-names.ts
+msgid "Corsica"
+msgstr "Corsica"
+
+#: src/data/static-data/city-names.ts
+msgid "Crete"
+msgstr "Crete"
+
+#: src/components/GameContentContainer.tsx
+msgid "Culture Influence"
+msgstr "Culture Influence"
+
+#: src/components/GameContentContainer.tsx
+#~ msgid "Culture Strength"
+#~ msgstr "Culture Strength"
+
+#: src/components/GameContentContainer.tsx
+#~ msgid "Current amount of gold in the treasury"
+#~ msgstr "Current amount of gold in the treasury"
+
+#: src/components/GameContentContainer.tsx
+msgid "Current amount of gold in the treasury.\n"
+"Affects the city's ability to maintain and expand its infrastructure.\n"
+"Buildings, units, and other expenses are paid from the treasury."
+msgstr "Current amount of gold in the treasury.\n"
+"Affects the city's ability to maintain and expand its infrastructure.\n"
+"Buildings, units, and other expenses are paid from the treasury."
+
+#: src/components/GameContentContainer.tsx
+msgid "Current culture influence of the city"
+msgstr "Current culture influence of the city"
+
+#: src/components/GameContentContainer.tsx
+#~ msgid "Current culture strength of the city"
+#~ msgstr "Current culture strength of the city"
+
+#: src/components/GameContentContainer.tsx
+#~ msgid "Current food supply level of the city"
+#~ msgstr "Current food supply level of the city"
+
+#: src/components/GameContentContainer.tsx
+msgid "Current food supply level of the city.\n"
+"Determines the city's ability to sustain its population.\n"
+"If the food supply is insufficient, the city may experience population decline.\n"
+"On the other hand, if the food supply is abundant, the city may experience population growth."
+msgstr "Current food supply level of the city.\n"
+"Determines the city's ability to sustain its population.\n"
+"If the food supply is insufficient, the city may experience population decline.\n"
+"On the other hand, if the food supply is abundant, the city may experience population growth."
+
+#: src/components/GameContentContainer.tsx
+msgid "Current military strength of the city"
+msgstr "Current military strength of the city"
+
+#: src/components/GameContentContainer.tsx
+msgid "Current political influence of the city"
+msgstr "Current political influence of the city"
+
+#: src/components/GameContentContainer.tsx
+#~ msgid "Current political strength of the city"
+#~ msgstr "Current political strength of the city"
+
+#: src/components/GameContentContainer.tsx
+#~ msgid "Current productivity of the city"
+#~ msgstr "Current productivity of the city"
+
+#: src/components/GameContentContainer.tsx
+msgid "Current productivity of the city.\n"
+"Affects the city's ability to produce goods and services.\n"
+"Consumed by production activities, units, and other expenses."
+msgstr "Current productivity of the city.\n"
+"Affects the city's ability to produce goods and services.\n"
+"Consumed by production activities, units, and other expenses."
+
+#: src/components/GameContentContainer.tsx
+msgid "Current religion influence of the city"
+msgstr "Current religion influence of the city"
+
+#: src/components/GameContentContainer.tsx
+#~ msgid "Current religion strength of the city"
+#~ msgstr "Current religion strength of the city"
+
+#: src/components/GameContentContainer.tsx
+#~ msgid "Current stability level of the city"
+#~ msgstr "Current stability level of the city"
+
+#: src/components/GameContentContainer.tsx
+msgid "Current stability level of the city.\n"
+"Affects the city's overall performance and citizen satisfaction.\n"
+"Low stability can lead to unrest, riots, and decreased productivity.\n"
+"High stability can lead to increased growth and prosperity."
+msgstr "Current stability level of the city.\n"
+"Affects the city's overall performance and citizen satisfaction.\n"
+"Low stability can lead to unrest, riots, and decreased productivity.\n"
+"High stability can lead to increased growth and prosperity."
+
+#: src/components/GameContentContainer.tsx
+msgid "Current technology strength of the city"
+msgstr "Current technology strength of the city"
+
+#: src/components/GameContentContainer.tsx
+msgid "Current trade influence of the city"
+msgstr "Current trade influence of the city"
+
+#: src/components/GameContentContainer.tsx
+#~ msgid "Current trade strength of the city"
+#~ msgstr "Current trade strength of the city"
+
+#: src/data/static-data/city-names.ts
+msgid "Cyprus"
+msgstr "Cyprus"
+
+#: src/data/static-data/city-names.ts
+msgid "Cyrenaica"
+msgstr "Cyrenaica"
+
+#: src/data/static-data/city-names.ts
+msgid "Dacia"
+msgstr "Dacia"
+
+#: src/data/static-data/city-names.ts
+msgid "Dalmatia"
+msgstr "Dalmatia"
+
+#: src/data/static-data/city-names.ts
+msgid "Epirus"
+msgstr "Epirus"
+
+#: src/components/GameContentContainer.tsx
+msgid "Food Supply"
+msgstr "Food Supply"
+
+#: src/data/static-data/city-names.ts
+msgid "Galatia"
+msgstr "Galatia"
+
+#: src/data/static-data/city-names.ts
+#~ msgid "Gallia Aquitania"
+#~ msgstr "Gallia Aquitania"
+
+#: src/data/static-data/city-names.ts
+#~ msgid "Gallia Belgica"
+#~ msgstr "Gallia Belgica"
+
+#: src/data/static-data/city-names.ts
+#~ msgid "Gallia Lugdunensis"
+#~ msgstr "Gallia Lugdunensis"
+
+#: src/data/static-data/city-names.ts
+#~ msgid "Gallia Narbonensis"
+#~ msgstr "Gallia Narbonensis"
+
+#. Game Content
+#: src/components/GameContent.tsx
+msgid "Game Content"
+msgstr "Game Content"
+
+#: src/data/static-data/city-names.ts
+msgid "Germania Inferior"
+msgstr "Germania Inferior"
+
+#: src/data/static-data/city-names.ts
+msgid "Germania Superior"
+msgstr "Germania Superior"
+
+#: src/data/static-data/city-names.ts
+#~ msgid "Hispania Baetica"
+#~ msgstr "Hispania Baetica"
+
+#: src/data/static-data/city-names.ts
+#~ msgid "Hispania Lusitania"
+#~ msgstr "Hispania Lusitania"
+
+#: src/data/static-data/city-names.ts
+#~ msgid "Hispania Tarraconensis"
+#~ msgstr "Hispania Tarraconensis"
 
 #. Game name
 #: src/components/Header.tsx
 msgid "Imperator"
 msgstr "Imperator"
 
+#: src/data/static-data/city-names.ts
+msgid "Italia"
+msgstr "Italia"
+
+#: src/data/static-data/city-names.ts
+msgid "Iudaea"
+msgstr "Iudaea"
+
+#: src/components/GameContentContainer.tsx
+#~ msgid "Legions"
+#~ msgstr "Legions"
+
+#: src/data/static-data/city-names.ts
+msgid "Lugdunensis"
+msgstr "Lugdunensis"
+
+#: src/data/static-data/city-names.ts
+msgid "Lusitania"
+msgstr "Lusitania"
+
+#: src/data/static-data/city-names.ts
+msgid "Lycia"
+msgstr "Lycia"
+
+#: src/data/static-data/city-names.ts
+msgid "Macedonia"
+msgstr "Macedonia"
+
+#: src/data/static-data/city-names.ts
+msgid "Mauretania Caesariensis"
+msgstr "Mauretania Caesariensis"
+
+#: src/data/static-data/city-names.ts
+msgid "Mauretania Tingitana"
+msgstr "Mauretania Tingitana"
+
+#: src/data/static-data/city-names.ts
+msgid "Mesopotamia"
+msgstr "Mesopotamia"
+
+#: src/components/GameContentContainer.tsx
+msgid "Military Strength"
+msgstr "Military Strength"
+
+#: src/data/static-data/city-names.ts
+msgid "Moesia Inferior"
+msgstr "Moesia Inferior"
+
+#: src/data/static-data/city-names.ts
+msgid "Moesia Superior"
+msgstr "Moesia Superior"
+
+#: src/components/GameContentContainer.tsx
+msgid "Name"
+msgstr "Name"
+
+#: src/components/GameContentContainer.tsx
+#~ msgid "Name of the city"
+#~ msgstr "Name of the city"
+
+#: src/data/static-data/city-names.ts
+msgid "Narbonensis"
+msgstr "Narbonensis"
+
+#: src/data/static-data/city-names.ts
+msgid "Noricum"
+msgstr "Noricum"
+
+#: src/data/static-data/city-names.ts
+msgid "Pamphylia"
+msgstr "Pamphylia"
+
+#: src/data/static-data/city-names.ts
+msgid "Pannonia Inferior"
+msgstr "Pannonia Inferior"
+
+#: src/data/static-data/city-names.ts
+msgid "Pannonia Superior"
+msgstr "Pannonia Superior"
+
+#: src/data/static-data/city-names.ts
+#~ msgid "Poeninae"
+#~ msgstr "Poeninae"
+
+#: src/components/GameContentContainer.tsx
+msgid "Political Influence"
+msgstr "Political Influence"
+
+#: src/components/GameContentContainer.tsx
+#~ msgid "Political Strength"
+#~ msgstr "Political Strength"
+
+#: src/data/static-data/city-names.ts
+msgid "Pontus"
+msgstr "Pontus"
+
+#: src/components/GameContentContainer.tsx
+msgid "Population"
+msgstr "Population"
+
+#: src/components/GameContentContainer.tsx
+msgid "Productivity"
+msgstr "Productivity"
+
+#: src/data/static-data/city-names.ts
+msgid "Raetia"
+msgstr "Raetia"
+
+#: src/components/GameContentContainer.tsx
+msgid "Religion Influence"
+msgstr "Religion Influence"
+
+#: src/components/GameContentContainer.tsx
+#~ msgid "Religion Strength"
+#~ msgstr "Religion Strength"
+
+#: src/data/static-data/city-names.ts
+msgid "Sardinia"
+msgstr "Sardinia"
+
+#: src/data/static-data/city-names.ts
+msgid "Sicilia"
+msgstr "Sicilia"
+
+#: src/components/GameContentContainer.tsx
+msgid "Stability"
+msgstr "Stability"
+
 #. Start new game
 #: src/components/Header.tsx
 msgid "Start New Game"
 msgstr "Start New Game"
+
+#: src/data/static-data/city-names.ts
+msgid "Syria"
+msgstr "Syria"
+
+#: src/data/static-data/city-names.ts
+msgid "Tarraconensis"
+msgstr "Tarraconensis"
+
+#: src/components/GameContentContainer.tsx
+msgid "Technology Strength"
+msgstr "Technology Strength"
+
+#: src/data/static-data/city-names.ts
+msgid "Thracia"
+msgstr "Thracia"
+
+#: src/components/GameContentContainer.tsx
+#~ msgid "Total population of the city"
+#~ msgstr "Total population of the city"
+
+#: src/components/GameContentContainer.tsx
+msgid "Total population of the city.\n"
+"Basic unit of measurement for the city's size and growth.\n"
+"Affects everything from resource production to military strength."
+msgstr "Total population of the city.\n"
+"Basic unit of measurement for the city's size and growth.\n"
+"Affects everything from resource production to military strength."
+
+#: src/components/GameContentContainer.tsx
+msgid "Trade Influence"
+msgstr "Trade Influence"
+
+#: src/components/GameContentContainer.tsx
+#~ msgid "Trade Strength"
+#~ msgstr "Trade Strength"
+
+#: src/components/GameContentContainer.tsx
+msgid "Treasury"
+msgstr "Treasury"
