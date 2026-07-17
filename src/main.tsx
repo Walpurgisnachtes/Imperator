@@ -32,7 +32,7 @@ if (!rootElement) {
   throw new Error("Failed to find the root element");
 }
 
-createRoot(document.getElementById('root')!).render(
+createRoot(rootElement).render(
   <StrictMode>
     <Root />
   </StrictMode>,
