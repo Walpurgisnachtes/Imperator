@@ -2,7 +2,6 @@
 import React, { useState } from "react";
 import type { Information, InformationColumnProps } from "../types/information";
 import { InformationHoverBox } from "./InformationHoverBox";
-import { Trans } from "@lingui/react/macro";
 import { CityNameGenerator } from "../data/static-data/city-names";
 
 interface HoveredInformation {
