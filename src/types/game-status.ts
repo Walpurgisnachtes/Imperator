@@ -34,3 +34,6 @@ export interface CityInfo {
   warWearinessStrength: number; // Maximus: 100, Minimus: 0
 }
 
+export interface GameStatus {
+  cities: CityInfo[];
+}
