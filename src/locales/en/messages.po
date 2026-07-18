@@ -50,6 +50,14 @@ msgstr "Alpes Maritimae"
 msgid "Alpes Poeninae"
 msgstr "Alpes Poeninae"
 
+#: src/types/city-info.ts
+msgid "Animosity Direction"
+msgstr "Animosity Direction"
+
+#: src/types/city-info.ts
+msgid "Animosity Influence"
+msgstr "Animosity Influence"
+
 #: src/data/static-data/city-names.ts
 msgid "Aquitania"
 msgstr "Aquitania"
@@ -105,6 +113,10 @@ msgstr "Cilicia"
 msgid "City Overview"
 msgstr "City Overview"
 
+#: src/components/ComingSoon.tsx
+msgid "Coming Soon"
+msgstr "Coming Soon"
+
 #. Continue
 #: src/components/Header.tsx
 msgid "Continue"
@@ -118,7 +130,11 @@ msgstr "Corsica"
 msgid "Crete"
 msgstr "Crete"
 
-#: src/components/GameContentContainer.tsx
+#: src/types/city-info.ts
+msgid "Crime Influence"
+msgstr "Crime Influence"
+
+#: src/types/city-info.ts
 msgid "Culture Influence"
 msgstr "Culture Influence"
 
@@ -130,7 +146,7 @@ msgstr "Culture Influence"
 #~ msgid "Current amount of gold in the treasury"
 #~ msgstr "Current amount of gold in the treasury"
 
-#: src/components/GameContentContainer.tsx
+#: src/types/city-info.ts
 msgid "Current amount of gold in the treasury.\n"
 "Affects the city's ability to maintain and expand its infrastructure.\n"
 "Buildings, units, and other expenses are paid from the treasury."
@@ -138,11 +154,35 @@ msgstr "Current amount of gold in the treasury.\n"
 "Affects the city's ability to maintain and expand its infrastructure.\n"
 "Buildings, units, and other expenses are paid from the treasury."
 
+#: src/types/city-info.ts
+msgid "Current animosity direction of the city.\n"
+"Affects the city's efficiency in its crackdown and military actions.\n"
+"The direction indicates which faction or city the animosity is primarily directed towards."
+msgstr "Current animosity direction of the city.\n"
+"Affects the city's efficiency in its crackdown and military actions.\n"
+"The direction indicates which faction or city the animosity is primarily directed towards."
+
+#: src/types/city-info.ts
+msgid "Current animosity influence of the city.\n"
+"Affects the city's ability to manage conflicts and rivalries.\n"
+"High animosity influence can lead to increased tension and decreased stability."
+msgstr "Current animosity influence of the city.\n"
+"Affects the city's ability to manage conflicts and rivalries.\n"
+"High animosity influence can lead to increased tension and decreased stability."
+
+#: src/types/city-info.ts
+msgid "Current crime influence of the city.\n"
+"Affected by the city's stability.\n"
+"High crime influence can lead to increased unrest and decreased stability."
+msgstr "Current crime influence of the city.\n"
+"Affected by the city's stability.\n"
+"High crime influence can lead to increased unrest and decreased stability."
+
 #: src/components/GameContentContainer.tsx
 #~ msgid "Current culture influence of the city"
 #~ msgstr "Current culture influence of the city"
 
-#: src/components/GameContentContainer.tsx
+#: src/types/city-info.ts
 msgid "Current culture influence of the city.\n"
 "Affects the city's ability to shape societal values and norms.\n"
 "High culture influence can lead to increased unity and citizen engagement."
@@ -158,7 +198,7 @@ msgstr "Current culture influence of the city.\n"
 #~ msgid "Current food supply level of the city"
 #~ msgstr "Current food supply level of the city"
 
-#: src/components/GameContentContainer.tsx
+#: src/types/city-info.ts
 msgid "Current food supply level of the city.\n"
 "Determines the city's ability to sustain its population.\n"
 "If the food supply is insufficient, the city may experience population decline.\n"
@@ -172,7 +212,7 @@ msgstr "Current food supply level of the city.\n"
 #~ msgid "Current military strength of the city"
 #~ msgstr "Current military strength of the city"
 
-#: src/components/GameContentContainer.tsx
+#: src/types/city-info.ts
 msgid "Current military strength of the city.\n"
 "Affects the city's ability to defend itself and project power.\n"
 "High military strength can deter potential aggressors and enable successful military campaigns."
@@ -184,7 +224,7 @@ msgstr "Current military strength of the city.\n"
 #~ msgid "Current political influence of the city"
 #~ msgstr "Current political influence of the city"
 
-#: src/components/GameContentContainer.tsx
+#: src/types/city-info.ts
 msgid "Current political influence of the city.\n"
 "Affects the city's right to speak and participate in decision-making among the whole empire.\n"
 "High political influence will lead to increased representation and influence in the empire's governance."
@@ -200,7 +240,7 @@ msgstr "Current political influence of the city.\n"
 #~ msgid "Current productivity of the city"
 #~ msgstr "Current productivity of the city"
 
-#: src/components/GameContentContainer.tsx
+#: src/types/city-info.ts
 msgid "Current productivity of the city.\n"
 "Affects the city's ability to produce goods and services.\n"
 "Consumed by production activities, units, and other expenses."
@@ -212,7 +252,7 @@ msgstr "Current productivity of the city.\n"
 #~ msgid "Current religion influence of the city"
 #~ msgstr "Current religion influence of the city"
 
-#: src/components/GameContentContainer.tsx
+#: src/types/city-info.ts
 msgid "Current religion influence of the city.\n"
 "Affects the city's ability to shape and spread religious practices and beliefs.\n"
 "High religion influence can lead to increased stability and effectiveness in spreading religion to nearby cities."
@@ -228,7 +268,7 @@ msgstr "Current religion influence of the city.\n"
 #~ msgid "Current stability level of the city"
 #~ msgstr "Current stability level of the city"
 
-#: src/components/GameContentContainer.tsx
+#: src/types/city-info.ts
 msgid "Current stability level of the city.\n"
 "Affects the city's overall performance and citizen satisfaction.\n"
 "Low stability can lead to unrest, riots, and decreased productivity.\n"
@@ -242,7 +282,7 @@ msgstr "Current stability level of the city.\n"
 #~ msgid "Current technology strength of the city"
 #~ msgstr "Current technology strength of the city"
 
-#: src/components/GameContentContainer.tsx
+#: src/types/city-info.ts
 msgid "Current technology strength of the city.\n"
 "Affects the whole empire's ability to innovate and advance.\n"
 "High technology strength can lead to increased efficiency in research and productivity generation."
@@ -254,7 +294,7 @@ msgstr "Current technology strength of the city.\n"
 #~ msgid "Current trade influence of the city"
 #~ msgstr "Current trade influence of the city"
 
-#: src/components/GameContentContainer.tsx
+#: src/types/city-info.ts
 msgid "Current trade influence of the city.\n"
 "Affects the city's ability to create fortune, generate wealth, and engage in commerce.\n"
 "High trade influence can lead to increased income and economic growth."
@@ -265,6 +305,14 @@ msgstr "Current trade influence of the city.\n"
 #: src/components/GameContentContainer.tsx
 #~ msgid "Current trade strength of the city"
 #~ msgstr "Current trade strength of the city"
+
+#: src/types/city-info.ts
+msgid "Current war weariness influence of the city.\n"
+"Affected by the city's military engagements and overall stability.\n"
+"High war weariness influence can lead to decreased military effectiveness and increased unrest."
+msgstr "Current war weariness influence of the city.\n"
+"Affected by the city's military engagements and overall stability.\n"
+"High war weariness influence can lead to decreased military effectiveness and increased unrest."
 
 #: src/data/static-data/city-names.ts
 msgid "Cyprus"
@@ -286,7 +334,7 @@ msgstr "Dalmatia"
 msgid "Epirus"
 msgstr "Epirus"
 
-#: src/components/GameContentContainer.tsx
+#: src/types/city-info.ts
 msgid "Food Supply"
 msgstr "Food Supply"
 
@@ -312,8 +360,8 @@ msgstr "Galatia"
 
 #. Game Content
 #: src/components/GameContent.tsx
-msgid "Game Content"
-msgstr "Game Content"
+#~ msgid "Game Content"
+#~ msgstr "Game Content"
 
 #: src/data/static-data/city-names.ts
 msgid "Germania Inferior"
@@ -380,7 +428,7 @@ msgstr "Mauretania Tingitana"
 msgid "Mesopotamia"
 msgstr "Mesopotamia"
 
-#: src/components/GameContentContainer.tsx
+#: src/types/city-info.ts
 msgid "Military Strength"
 msgstr "Military Strength"
 
@@ -392,7 +440,7 @@ msgstr "Moesia Inferior"
 msgid "Moesia Superior"
 msgstr "Moesia Superior"
 
-#: src/components/GameContentContainer.tsx
+#: src/types/city-info.ts
 msgid "Name"
 msgstr "Name"
 
@@ -424,7 +472,7 @@ msgstr "Pannonia Superior"
 #~ msgid "Poeninae"
 #~ msgstr "Poeninae"
 
-#: src/components/GameContentContainer.tsx
+#: src/types/city-info.ts
 msgid "Political Influence"
 msgstr "Political Influence"
 
@@ -436,11 +484,11 @@ msgstr "Political Influence"
 msgid "Pontus"
 msgstr "Pontus"
 
-#: src/components/GameContentContainer.tsx
+#: src/types/city-info.ts
 msgid "Population"
 msgstr "Population"
 
-#: src/components/GameContentContainer.tsx
+#: src/types/city-info.ts
 msgid "Productivity"
 msgstr "Productivity"
 
@@ -448,7 +496,7 @@ msgstr "Productivity"
 msgid "Raetia"
 msgstr "Raetia"
 
-#: src/components/GameContentContainer.tsx
+#: src/types/city-info.ts
 msgid "Religion Influence"
 msgstr "Religion Influence"
 
@@ -464,7 +512,7 @@ msgstr "Sardinia"
 msgid "Sicilia"
 msgstr "Sicilia"
 
-#: src/components/GameContentContainer.tsx
+#: src/types/city-info.ts
 msgid "Stability"
 msgstr "Stability"
 
@@ -481,7 +529,7 @@ msgstr "Syria"
 msgid "Tarraconensis"
 msgstr "Tarraconensis"
 
-#: src/components/GameContentContainer.tsx
+#: src/types/city-info.ts
 msgid "Technology Strength"
 msgstr "Technology Strength"
 
@@ -493,7 +541,7 @@ msgstr "Thracia"
 #~ msgid "Total population of the city"
 #~ msgstr "Total population of the city"
 
-#: src/components/GameContentContainer.tsx
+#: src/types/city-info.ts
 msgid "Total population of the city.\n"
 "Basic unit of measurement for the city's size and growth.\n"
 "Affects everything from resource production to military strength."
@@ -501,7 +549,7 @@ msgstr "Total population of the city.\n"
 "Basic unit of measurement for the city's size and growth.\n"
 "Affects everything from resource production to military strength."
 
-#: src/components/GameContentContainer.tsx
+#: src/types/city-info.ts
 msgid "Trade Influence"
 msgstr "Trade Influence"
 
@@ -509,6 +557,10 @@ msgstr "Trade Influence"
 #~ msgid "Trade Strength"
 #~ msgstr "Trade Strength"
 
-#: src/components/GameContentContainer.tsx
+#: src/types/city-info.ts
 msgid "Treasury"
 msgstr "Treasury"
+
+#: src/types/city-info.ts
+msgid "War Weariness Influence"
+msgstr "War Weariness Influence"
