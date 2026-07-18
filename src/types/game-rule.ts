@@ -1,6 +1,8 @@
+import type { MessageDescriptor } from "@lingui/core";
+
 export type GameRule = {
   id: string;
-  name: string;
+  name: MessageDescriptor;
   value: number|string|boolean;
 
   isEnabled: boolean;
