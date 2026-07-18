@@ -1,6 +1,8 @@
 import { ComingSoonDiv } from "./ComingSoon";
 import type { GameContentHTMLContext } from "../types/game-content-html-context";
 import type { FC } from "react";
+import { BuildingsList } from "./City/BuildingsList";
+import { gameStatus } from "../data/static-data/game-data";
 
 export const GameContent: FC<{ context: GameContentHTMLContext }> = ({
   context,
@@ -10,7 +12,7 @@ export const GameContent: FC<{ context: GameContentHTMLContext }> = ({
       {(() => {
         switch (context) {
           case "city/building":
-            return <div>City Building Content</div>;
+            return <BuildingsList data={gameStatus.cities[0]} />;
           default:
           case "city/dialog":
             return <ComingSoonDiv />;
