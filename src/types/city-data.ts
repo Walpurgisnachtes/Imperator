@@ -12,7 +12,7 @@ export interface CityData {
 
   // Visible info
   // Primum info
-  name: string;
+  name: number;
 
   population: number; // Illimitatus
   treasury: number; // Illimitatus
@@ -37,10 +37,10 @@ export interface CityData {
 }
 
 export function createNewCityData(
-  usedNames: string[],
+  usedNames: number[],
   resources?: { [resourceId: string]: number },
   buildings?: BuildingInfo[],
-  name?: string,
+  name?: number,
   population?: number,
   treasury?: number,
   happiness?: number,
@@ -62,7 +62,7 @@ export function createNewCityData(
     if (name) {
       return name;
     }
-    let randomName = "";
+    let randomName = 0;
     let attempts = 0;
     while (attempts < 100) {
       randomName = CityNameGenerator.getRandomCityName();

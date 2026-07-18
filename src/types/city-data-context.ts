@@ -6,7 +6,7 @@ export const CityDataContext = createContext<CityData>(
     id: "",
     resources: {},
     buildings: [],
-    name: "",
+    name: 0,
     population: 0,
     treasury: 0,
     happiness: 0,

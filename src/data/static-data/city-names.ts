@@ -60,8 +60,8 @@ export const CityNameGenerator = {
     return i18n._(provinciae[index % provinciae.length]);
   },
 
-  getRandomCityName(): string {
+  getRandomCityName(): number {
     const randomIndex = Math.floor(Math.random() * provinciae.length);
-    return this.getCityName(randomIndex);
+    return randomIndex;
   },
 };

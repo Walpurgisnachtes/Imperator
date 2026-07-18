@@ -17,7 +17,7 @@ export const defaultCityInfo: CityInfo = createCityInfo({
   id: "0",
   resources: {},
   buildings: [],
-  name: "",
+  name: 0,
   population: 0,
   treasury: 0,
   happiness: 0,
