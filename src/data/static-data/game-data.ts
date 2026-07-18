@@ -5,4 +5,5 @@ export const gameStatus: GameStatus = {
   hash: "",
   gameVersion: "",
   cities: [createNewCityData()],
+  capitalId: "",
 };

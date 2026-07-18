@@ -4,4 +4,5 @@ export interface GameStatus {
   hash: string;
   gameVersion: string;
   cities: CityData[];
+  capitalId: string;
 }
