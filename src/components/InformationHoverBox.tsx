@@ -1,6 +1,8 @@
-import React from "react";
+import type { FC } from "react";
+import { Fragment } from "react";
 import type { Information } from "../types/information";
 import { CityNameGenerator } from "../data/static-data/city-names";
+import { i18n } from "@lingui/core";
 
 interface InformationHoverBoxProps {
   item: Information;
@@ -10,20 +12,40 @@ interface InformationHoverBoxProps {
   };
 }
 
-export const InformationHoverBox: React.FC<InformationHoverBoxProps> = ({
+export const InformationHoverBox: FC<InformationHoverBoxProps> = ({
   item,
   position,
 }) => {
+  const labelGetter = (item: Information) => {
+    if (typeof item.label === "string") {
+      return item.label;
+    }
+    return i18n.t(item.label);
+  };
+
+  const descriptionGetter = (item: Information) => {
+    if (item.description === undefined) {
+      return "";
+    }
+    if (typeof item.description === "string") {
+      return item.description;
+    }
+    return i18n.t(item.description);
+  };
+
   let itemDescription =
     item.description &&
-    item.description.split("\n").map((line, index) => (
-      <React.Fragment key={index}>
-        {line}
-        <br />
-      </React.Fragment>
-    ));
+    descriptionGetter(item)
+      .split("\n")
+      .map((line, index) => (
+        <Fragment key={index}>
+          {line}
+          <br />
+        </Fragment>
+      ));
 
   const translateY = position.y < window.innerHeight / 2 ? "-100%" : "-150%";
+  let label = labelGetter(item);
   let value =
     item.id == "city-name"
       ? CityNameGenerator.getCityName(Number(item.value))
@@ -39,7 +61,7 @@ export const InformationHoverBox: React.FC<InformationHoverBoxProps> = ({
       }}
     >
       <p className="flex flex-row justify-between text-sm text-left font-bold border-b border-slate-700 pb-2">
-        <span>{item.label}</span>
+        <span>{label}</span>
         <span>{value}</span>
       </p>
       <p className="text-sm text-left pt-2">{itemDescription}</p>
