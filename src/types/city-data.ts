@@ -1,6 +1,5 @@
 import type { BuildingInfo } from "./building-status";
 import { CityNameGenerator } from "../data/static-data/city-names";
-import { gameStatus } from "../data/static-data/game-data";
 import { v4 as UUIDv4 } from "uuid";
 
 type AnimosityDirection = "none" | "this-city" | "friendly-city" | "enemy-city";
@@ -38,6 +37,7 @@ export interface CityData {
 }
 
 export function createNewCityData(
+  usedNames: string[],
   resources?: { [resourceId: string]: number },
   buildings?: BuildingInfo[],
   name?: string,
@@ -63,7 +63,6 @@ export function createNewCityData(
       return name;
     }
     let randomName = "";
-    let usedNames = gameStatus.cities.map((city) => city.name);
     let attempts = 0;
     while (attempts < 100) {
       randomName = CityNameGenerator.getRandomCityName();
