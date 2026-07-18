@@ -1,12 +1,21 @@
-import { Trans } from "@lingui/react/macro";
-import React from "react";
+import { ComingSoonDiv } from "./ComingSoon";
+import type { GameContentHTMLContext } from "../types/game-content-html-context";
+import type { FC } from "react";
 
-export const GameContent: React.FC = () => {
+export const GameContent: FC<{ context: GameContentHTMLContext }> = ({
+  context,
+}) => {
   return (
     <div id="game-content" className="flex flex-col gap-8">
-      <h1 className="text-2xl font-bold text-white">
-        <Trans comment="Game Content">Game Content</Trans>
-      </h1>
+      {(() => {
+        switch (context) {
+          case "city/building":
+            return <div>City Building Content</div>;
+          default:
+          case "city/dialog":
+            return <ComingSoonDiv />;
+        }
+      })()}
     </div>
   );
 };

@@ -1,6 +1,8 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { InformationColumn } from "./InformationColumn";
 import { GameContent } from "./GameContent";
+import { gameContentContextChangedEventName } from "../types/game-content-html-context";
+import type { GameContentHTMLContext } from "../types/game-content-html-context";
 import type { Information } from "../types/information";
 import { getCityStatusImage } from "../data/city-status";
 
@@ -8,6 +10,32 @@ import { useLingui } from "@lingui/react/macro";
 
 export const GameContentContainer: React.FC = () => {
   const { t } = useLingui();
+
+  const [currentContext, setCurrentContext] =
+    React.useState<GameContentHTMLContext>("city/building");
+
+  useEffect(() => {
+    const handleContextChange = (event: Event) => {
+      const customEvent = event as CustomEvent<{
+        context: GameContentHTMLContext;
+      }>;
+      if (customEvent.detail && customEvent.detail.context) {
+        setCurrentContext(customEvent.detail.context);
+      }
+    };
+
+    window.addEventListener(
+      gameContentContextChangedEventName,
+      handleContextChange,
+    );
+
+    return () => {
+      window.removeEventListener(
+        gameContentContextChangedEventName,
+        handleContextChange,
+      );
+    };
+  }, []);
 
   const cityOverview: {
     upper: Information[];
@@ -99,7 +127,7 @@ export const GameContentContainer: React.FC = () => {
         statusImage={getCityStatusImage("good", false)}
         information={cityOverview}
       />
-      <GameContent />
+      <GameContent context={currentContext} />
     </div>
   );
 };
