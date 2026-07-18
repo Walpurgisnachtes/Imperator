@@ -1,22 +1,35 @@
-import { StrictMode, useState, useEffect } from 'react'
-import { createRoot } from 'react-dom/client'
+import { StrictMode, useState, useEffect } from "react";
+import { createRoot } from "react-dom/client";
 import { I18nProvider } from "@lingui/react";
 import { i18n } from "@lingui/core";
 import { dynamicActivate } from "./i18n";
-import './index.css'
-import App from './App.tsx'
+import "./index.css";
+import App from "./App.tsx";
+import { createNewGame } from "./scripts/game-loader.ts";
 
 function Root(): React.JSX.Element {
   const [loading, setLoading] = useState<boolean>(true);
 
   useEffect(() => {
-    dynamicActivate("en")
-      .then(() => setLoading(false))
-      .catch((err) => console.error("Failed to load translation:", err));
+    (async () => {
+      await dynamicActivate("en");
+      await createNewGame();
+    })()
+      .then(() => {
+        setLoading(false);
+      })
+      .catch((err) => {
+        console.error("Failed to load:", err);
+        setLoading(false);
+      });
   }, []);
 
   if (loading) {
-    return <div className="flex h-screen items-center justify-center">Loading...</div>;
+    return (
+      <div className="flex h-screen items-center justify-center">
+        Loading...
+      </div>
+    );
   }
 
   return (
@@ -36,4 +49,4 @@ createRoot(rootElement).render(
   <StrictMode>
     <Root />
   </StrictMode>,
-)
+);
