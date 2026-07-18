@@ -1,6 +1,6 @@
 import type { BuildingInfo } from "./building-status";
 import { CityNameGenerator } from "../data/static-data/city-names";
-import { gameStatus } from "../data/game-data";
+import { gameStatus } from "../data/static-data/game-data";
 import { v4 as UUIDv4 } from "uuid";
 
 type AnimosityDirection = "none" | "this-city" | "friendly-city" | "enemy-city";
