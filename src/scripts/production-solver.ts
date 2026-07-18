@@ -1,4 +1,4 @@
-import type { CityInfo } from "../types/game-status"; // 假設你將原本的 Interface 放在這裡
+import type { CityData } from "../types/city-data";
 import type { BuildingInfo } from "../types/building-status";
 import type { ProductionRecipe } from "../types/production-recipe";
 import { useLingui } from "@lingui/react/macro";
@@ -14,7 +14,7 @@ export interface ResourceMap {
  * @param city 城市當前資訊
  * @returns 這一回合實際消耗與產出的總計，以及更新後的倉庫
  */
-export function runProductionRound(city: CityInfo): {
+export function runProductionRound(city: CityData): {
   updatedInventory: ResourceMap;
   noProductionBuildingIds: string[];
   productionLog: string[];
