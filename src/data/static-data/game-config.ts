@@ -1,1 +1,3 @@
-export const gameConfig = {};
+export const gameConfig = {
+  
+};
