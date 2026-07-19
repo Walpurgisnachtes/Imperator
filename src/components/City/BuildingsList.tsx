@@ -22,7 +22,7 @@ export const BuildingsList: React.FC<{ data: CityData }> = ({ data }) => {
             key={building.id}
             className={`text-lg font-bold text-slate-100 ${idx < data.buildings.length - 1 || canBuildMore ? `border-b border-slate-700 pb-2` : ``}`}
           >
-            {building.name} - Level: {building.level}
+            
           </li>
         ))}
         {canBuildMore && (
