@@ -6,6 +6,7 @@ import { dynamicActivate } from "./i18n";
 import "./index.css";
 import App from "./App.tsx";
 import { createNewGame } from "./scripts/game-loader.ts";
+import { loadBuildings } from "./data/static-data/buildings.ts";
 
 function Root(): React.JSX.Element {
   const [loading, setLoading] = useState<boolean>(true);
@@ -13,6 +14,7 @@ function Root(): React.JSX.Element {
   useEffect(() => {
     (async () => {
       await dynamicActivate("en");
+      loadBuildings();
       await createNewGame();
     })()
       .then(() => {
