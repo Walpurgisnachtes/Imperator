@@ -8,6 +8,9 @@ import App from "./App.tsx";
 import { createNewGame } from "./scripts/game-loader.ts";
 import { loadBuildings } from "./data/static-data/buildings.ts";
 
+// Load game materials
+import "./data/static-data/buildings/_index.ts";
+
 function Root(): React.JSX.Element {
   const [loading, setLoading] = useState<boolean>(true);
 
