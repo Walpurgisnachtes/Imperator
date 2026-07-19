@@ -34,6 +34,7 @@ export const defaultCityInfo: CityInfo = createCityInfo({
   animosityStrength: 0,
   animosityDirection: "none",
   warWearinessStrength: 0,
+  geometryLimitations: { allows: {}, prohibits: {} },
 });
 
 export function createCityInfo(city: CityData): CityInfo {

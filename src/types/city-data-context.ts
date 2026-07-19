@@ -23,5 +23,6 @@ export const CityDataContext = createContext<CityData>(
     animosityStrength: 0,
     animosityDirection: "none",
     warWearinessStrength: 0,
+    geometryLimitations: { allows: {}, prohibits: {} },
   }
 );

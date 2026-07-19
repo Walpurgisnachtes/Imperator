@@ -1,6 +1,7 @@
 import type { BuildingInfo } from "./building-status";
 import { CityNameGenerator } from "../data/static-data/city-names";
 import { v4 as UUIDv4 } from "uuid";
+import type { GeometryLimitations } from "./geometry-limitations";
 
 type AnimosityDirection = "none" | "this-city" | "friendly-city" | "enemy-city";
 
@@ -34,6 +35,7 @@ export interface CityData {
   animosityStrength: number; // Maximus: 100, Minimus: 0
   animosityDirection: AnimosityDirection;
   warWearinessStrength: number; // Maximus: 100, Minimus: 0
+  geometryLimitations: GeometryLimitations;
 }
 
 export function createNewCityData(
@@ -57,6 +59,7 @@ export function createNewCityData(
   animosityStrength?: number,
   animosityDirection?: AnimosityDirection,
   warWearinessStrength?: number,
+  geometryLimitations?: GeometryLimitations,
 ): CityData {
   let getUniqueCityName = () => {
     if (name) {
@@ -95,5 +98,6 @@ export function createNewCityData(
     animosityStrength: animosityStrength ?? 0,
     animosityDirection: animosityDirection ?? "none",
     warWearinessStrength: warWearinessStrength ?? 0,
+    geometryLimitations: geometryLimitations ?? { allows: {}, prohibits: {} },
   };
 }
