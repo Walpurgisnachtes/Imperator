@@ -13,7 +13,7 @@ import { registerCity } from "../../types/city-registerer";
  */
 
 let defaultCityData: CityData[] = [
-  createNewCityData({}, [], "city-name-achaia", 44, {
+  createNewCityData({}, [], "city-achaia", 44, {
     allows: {
       wheat: 7,
       barley: 6,
@@ -37,7 +37,7 @@ let defaultCityData: CityData[] = [
     },
     prohibits: {},
   }),
-  createNewCityData({}, [], "city-name-aegyptus", 86, {
+  createNewCityData({}, [], "city-aegyptus", 86, {
     allows: {
       wheat: 28,
       barley: 16,
@@ -60,7 +60,7 @@ let defaultCityData: CityData[] = [
       forestry: 0,
     },
   }),
-  createNewCityData({}, [], "city-name-africa", 78, {
+  createNewCityData({}, [], "city-africa", 78, {
     allows: {
       wheat: 24,
       barley: 16,
@@ -83,7 +83,7 @@ let defaultCityData: CityData[] = [
     },
     prohibits: {},
   }),
-  createNewCityData({}, [], "city-name-alpes-cottiae", 16, {
+  createNewCityData({}, [], "city-alpes-cottiae", 16, {
     allows: {
       barley: 3,
       vegetable: 2,
@@ -101,7 +101,7 @@ let defaultCityData: CityData[] = [
       coastal: 0,
     },
   }),
-  createNewCityData({}, [], "city-name-alpes-maritimae", 18, {
+  createNewCityData({}, [], "city-alpes-maritimae", 18, {
     allows: {
       barley: 2,
       vegetable: 2,
@@ -121,7 +121,7 @@ let defaultCityData: CityData[] = [
     },
     prohibits: {},
   }),
-  createNewCityData({}, [], "city-name-alpes-graiae", 14, {
+  createNewCityData({}, [], "city-alpes-graiae", 14, {
     allows: {
       barley: 2,
       vegetable: 1,
@@ -138,7 +138,7 @@ let defaultCityData: CityData[] = [
       coastal: 0,
     },
   }),
-  createNewCityData({}, [], "city-name-alpes-poeninae", 14, {
+  createNewCityData({}, [], "city-alpes-poeninae", 14, {
     allows: {
       barley: 2,
       vegetable: 1,
@@ -155,7 +155,7 @@ let defaultCityData: CityData[] = [
       coastal: 0,
     },
   }),
-  createNewCityData({}, [], "city-name-arabia", 30, {
+  createNewCityData({}, [], "city-arabia", 30, {
     allows: {
       wheat: 3,
       barley: 5,
@@ -174,7 +174,7 @@ let defaultCityData: CityData[] = [
     },
     prohibits: {},
   }),
-  createNewCityData({}, [], "city-name-armenia", 38, {
+  createNewCityData({}, [], "city-armenia", 38, {
     allows: {
       wheat: 5,
       barley: 8,
@@ -197,7 +197,7 @@ let defaultCityData: CityData[] = [
     },
     prohibits: {},
   }),
-  createNewCityData({}, [], "city-name-asia", 76, {
+  createNewCityData({}, [], "city-asia", 76, {
     allows: {
       wheat: 14,
       barley: 9,
@@ -222,7 +222,7 @@ let defaultCityData: CityData[] = [
     },
     prohibits: {},
   }),
-  createNewCityData({}, [], "city-name-assyria", 30, {
+  createNewCityData({}, [], "city-assyria", 30, {
     allows: {
       wheat: 5,
       barley: 11,
@@ -239,7 +239,7 @@ let defaultCityData: CityData[] = [
       forestry: 0,
     },
   }),
-  createNewCityData({}, [], "city-name-bithynia", 50, {
+  createNewCityData({}, [], "city-bithynia", 50, {
     allows: {
       wheat: 9,
       barley: 7,
@@ -262,7 +262,7 @@ let defaultCityData: CityData[] = [
     },
     prohibits: {},
   }),
-  createNewCityData({}, [], "city-name-pontus", 46, {
+  createNewCityData({}, [], "city-pontus", 46, {
     allows: {
       wheat: 8,
       barley: 8,
@@ -285,7 +285,7 @@ let defaultCityData: CityData[] = [
     },
     prohibits: {},
   }),
-  createNewCityData({}, [], "city-name-britannia", 54, {
+  createNewCityData({}, [], "city-britannia", 54, {
     allows: {
       wheat: 11,
       barley: 14,
@@ -308,7 +308,7 @@ let defaultCityData: CityData[] = [
     },
     prohibits: {},
   }),
-  createNewCityData({}, [], "city-name-cappadocia", 38, {
+  createNewCityData({}, [], "city-cappadocia", 38, {
     allows: {
       wheat: 5,
       barley: 9,
@@ -328,7 +328,7 @@ let defaultCityData: CityData[] = [
     },
     prohibits: {},
   }),
-  createNewCityData({}, [], "city-name-cilicia", 42, {
+  createNewCityData({}, [], "city-cilicia", 42, {
     allows: {
       wheat: 8,
       barley: 6,
@@ -352,7 +352,7 @@ let defaultCityData: CityData[] = [
     },
     prohibits: {},
   }),
-  createNewCityData({}, [], "city-name-corsica", 24, {
+  createNewCityData({}, [], "city-corsica", 24, {
     allows: {
       wheat: 3,
       barley: 3,
@@ -376,7 +376,7 @@ let defaultCityData: CityData[] = [
     },
     prohibits: {},
   }),
-  createNewCityData({}, [], "city-name-sardinia", 36, {
+  createNewCityData({}, [], "city-sardinia", 36, {
     allows: {
       wheat: 12,
       barley: 8,
@@ -400,7 +400,7 @@ let defaultCityData: CityData[] = [
     },
     prohibits: {},
   }),
-  createNewCityData({}, [], "city-name-crete", 32, {
+  createNewCityData({}, [], "city-crete", 32, {
     allows: {
       wheat: 5,
       barley: 6,
@@ -422,7 +422,7 @@ let defaultCityData: CityData[] = [
     },
     prohibits: {},
   }),
-  createNewCityData({}, [], "city-name-cyrenaica", 34, {
+  createNewCityData({}, [], "city-cyrenaica", 34, {
     allows: {
       wheat: 7,
       barley: 8,
@@ -440,7 +440,7 @@ let defaultCityData: CityData[] = [
     },
     prohibits: {},
   }),
-  createNewCityData({}, [], "city-name-cyprus", 38, {
+  createNewCityData({}, [], "city-cyprus", 38, {
     allows: {
       wheat: 6,
       barley: 6,
@@ -463,7 +463,7 @@ let defaultCityData: CityData[] = [
     },
     prohibits: {},
   }),
-  createNewCityData({}, [], "city-name-dacia", 50, {
+  createNewCityData({}, [], "city-dacia", 50, {
     allows: {
       wheat: 9,
       barley: 9,
@@ -486,7 +486,7 @@ let defaultCityData: CityData[] = [
     },
     prohibits: {},
   }),
-  createNewCityData({}, [], "city-name-dalmatia", 48, {
+  createNewCityData({}, [], "city-dalmatia", 48, {
     allows: {
       wheat: 5,
       barley: 6,
@@ -511,7 +511,7 @@ let defaultCityData: CityData[] = [
     },
     prohibits: {},
   }),
-  createNewCityData({}, [], "city-name-epirus", 34, {
+  createNewCityData({}, [], "city-epirus", 34, {
     allows: {
       wheat: 3,
       barley: 5,
@@ -532,7 +532,7 @@ let defaultCityData: CityData[] = [
     },
     prohibits: {},
   }),
-  createNewCityData({}, [], "city-name-galatia", 38, {
+  createNewCityData({}, [], "city-galatia", 38, {
     allows: {
       wheat: 8,
       barley: 9,
@@ -553,7 +553,7 @@ let defaultCityData: CityData[] = [
     },
     prohibits: {},
   }),
-  createNewCityData({}, [], "city-name-aquitania", 50, {
+  createNewCityData({}, [], "city-aquitania", 50, {
     allows: {
       wheat: 11,
       barley: 9,
@@ -577,7 +577,7 @@ let defaultCityData: CityData[] = [
     },
     prohibits: {},
   }),
-  createNewCityData({}, [], "city-name-belgica", 48, {
+  createNewCityData({}, [], "city-belgica", 48, {
     allows: {
       wheat: 9,
       barley: 11,
@@ -598,7 +598,7 @@ let defaultCityData: CityData[] = [
     },
     prohibits: {},
   }),
-  createNewCityData({}, [], "city-name-lugdunensis", 50, {
+  createNewCityData({}, [], "city-lugdunensis", 50, {
     allows: {
       wheat: 11,
       barley: 10,
@@ -620,7 +620,7 @@ let defaultCityData: CityData[] = [
     },
     prohibits: {},
   }),
-  createNewCityData({}, [], "city-name-narbonensis", 58, {
+  createNewCityData({}, [], "city-narbonensis", 58, {
     allows: {
       wheat: 9,
       barley: 7,
@@ -644,7 +644,7 @@ let defaultCityData: CityData[] = [
     },
     prohibits: {},
   }),
-  createNewCityData({}, [], "city-name-germania-inferior", 42, {
+  createNewCityData({}, [], "city-germania-inferior", 42, {
     allows: {
       wheat: 7,
       barley: 10,
@@ -665,7 +665,7 @@ let defaultCityData: CityData[] = [
     },
     prohibits: {},
   }),
-  createNewCityData({}, [], "city-name-germania-superior", 44, {
+  createNewCityData({}, [], "city-germania-superior", 44, {
     allows: {
       wheat: 7,
       barley: 10,
@@ -686,7 +686,7 @@ let defaultCityData: CityData[] = [
     },
     prohibits: {},
   }),
-  createNewCityData({}, [], "city-name-baetica", 64, {
+  createNewCityData({}, [], "city-baetica", 64, {
     allows: {
       wheat: 12,
       barley: 9,
@@ -711,7 +711,7 @@ let defaultCityData: CityData[] = [
     },
     prohibits: {},
   }),
-  createNewCityData({}, [], "city-name-lusitania", 48, {
+  createNewCityData({}, [], "city-lusitania", 48, {
     allows: {
       wheat: 8,
       barley: 8,
@@ -736,7 +736,7 @@ let defaultCityData: CityData[] = [
     },
     prohibits: {},
   }),
-  createNewCityData({}, [], "city-name-tarraconensis", 66, {
+  createNewCityData({}, [], "city-tarraconensis", 66, {
     allows: {
       wheat: 12,
       barley: 9,
@@ -761,7 +761,7 @@ let defaultCityData: CityData[] = [
     },
     prohibits: {},
   }),
-  createNewCityData({}, [], "city-name-italia", 100, {
+  createNewCityData({}, [], "city-italia", 100, {
     allows: {
       wheat: 18,
       barley: 12,
@@ -786,7 +786,7 @@ let defaultCityData: CityData[] = [
     },
     prohibits: {},
   }),
-  createNewCityData({}, [], "city-name-iudaea", 38, {
+  createNewCityData({}, [], "city-iudaea", 38, {
     allows: {
       wheat: 7,
       barley: 9,
@@ -807,7 +807,7 @@ let defaultCityData: CityData[] = [
     },
     prohibits: {},
   }),
-  createNewCityData({}, [], "city-name-lycia", 34, {
+  createNewCityData({}, [], "city-lycia", 34, {
     allows: {
       wheat: 4,
       barley: 5,
@@ -830,7 +830,7 @@ let defaultCityData: CityData[] = [
     },
     prohibits: {},
   }),
-  createNewCityData({}, [], "city-name-pamphylia", 36, {
+  createNewCityData({}, [], "city-pamphylia", 36, {
     allows: {
       wheat: 7,
       barley: 6,
@@ -852,7 +852,7 @@ let defaultCityData: CityData[] = [
     },
     prohibits: {},
   }),
-  createNewCityData({}, [], "city-name-macedonia", 54, {
+  createNewCityData({}, [], "city-macedonia", 54, {
     allows: {
       wheat: 11,
       barley: 9,
@@ -876,7 +876,7 @@ let defaultCityData: CityData[] = [
     },
     prohibits: {},
   }),
-  createNewCityData({}, [], "city-name-mauretania-caesariensis", 40, {
+  createNewCityData({}, [], "city-mauretania-caesariensis", 40, {
     allows: {
       wheat: 8,
       barley: 8,
@@ -898,7 +898,7 @@ let defaultCityData: CityData[] = [
     },
     prohibits: {},
   }),
-  createNewCityData({}, [], "city-name-mauretania-tingitana", 40, {
+  createNewCityData({}, [], "city-mauretania-tingitana", 40, {
     allows: {
       wheat: 7,
       barley: 8,
@@ -920,7 +920,7 @@ let defaultCityData: CityData[] = [
     },
     prohibits: {},
   }),
-  createNewCityData({}, [], "city-name-mesopotamia", 46, {
+  createNewCityData({}, [], "city-mesopotamia", 46, {
     allows: {
       wheat: 10,
       barley: 15,
@@ -936,7 +936,7 @@ let defaultCityData: CityData[] = [
       forestry: 0,
     },
   }),
-  createNewCityData({}, [], "city-name-moesia-inferior", 46, {
+  createNewCityData({}, [], "city-moesia-inferior", 46, {
     allows: {
       wheat: 10,
       barley: 9,
@@ -960,7 +960,7 @@ let defaultCityData: CityData[] = [
     },
     prohibits: {},
   }),
-  createNewCityData({}, [], "city-name-moesia-superior", 46, {
+  createNewCityData({}, [], "city-moesia-superior", 46, {
     allows: {
       wheat: 8,
       barley: 9,
@@ -983,7 +983,7 @@ let defaultCityData: CityData[] = [
     },
     prohibits: {},
   }),
-  createNewCityData({}, [], "city-name-noricum", 40, {
+  createNewCityData({}, [], "city-noricum", 40, {
     allows: {
       barley: 7,
       vegetable: 4,
@@ -1003,7 +1003,7 @@ let defaultCityData: CityData[] = [
     },
     prohibits: {},
   }),
-  createNewCityData({}, [], "city-name-pannonia-inferior", 44, {
+  createNewCityData({}, [], "city-pannonia-inferior", 44, {
     allows: {
       wheat: 10,
       barley: 9,
@@ -1024,7 +1024,7 @@ let defaultCityData: CityData[] = [
     },
     prohibits: {},
   }),
-  createNewCityData({}, [], "city-name-pannonia-superior", 42, {
+  createNewCityData({}, [], "city-pannonia-superior", 42, {
     allows: {
       wheat: 9,
       barley: 9,
@@ -1045,7 +1045,7 @@ let defaultCityData: CityData[] = [
     },
     prohibits: {},
   }),
-  createNewCityData({}, [], "city-name-raetia", 34, {
+  createNewCityData({}, [], "city-raetia", 34, {
     allows: {
       barley: 6,
       vegetable: 3,
@@ -1064,7 +1064,7 @@ let defaultCityData: CityData[] = [
     },
     prohibits: {},
   }),
-  createNewCityData({}, [], "city-name-sicilia", 58, {
+  createNewCityData({}, [], "city-sicilia", 58, {
     allows: {
       wheat: 20,
       barley: 10,
@@ -1085,7 +1085,7 @@ let defaultCityData: CityData[] = [
     },
     prohibits: {},
   }),
-  createNewCityData({}, [], "city-name-syria", 66, {
+  createNewCityData({}, [], "city-syria", 66, {
     allows: {
       wheat: 9,
       barley: 11,
@@ -1108,7 +1108,7 @@ let defaultCityData: CityData[] = [
     },
     prohibits: {},
   }),
-  createNewCityData({}, [], "city-name-thracia", 48, {
+  createNewCityData({}, [], "city-thracia", 48, {
     allows: {
       wheat: 10,
       barley: 9,
