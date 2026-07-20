@@ -1,8 +1,9 @@
-import { registerBuilding, createDefaultBuilding } from "../buildings";
+import { createDefaultBuilding } from "../buildings";
 import type { ProductionRecipe } from "../../../types/production-recipe";
 import type { BuildingRequirement } from "../../../types/building-requirement";
 import type { MessageDescriptor } from "@lingui/core";
 import { msg } from "@lingui/core/macro";
+import { registerBuilding } from "../../../types/building-registerer";
 
 let buildingName: MessageDescriptor = msg`Iron Mine`;
 let buildingDescription: MessageDescriptor = msg`Provides iron, which is necessary for building, tools, and military equipment.`;

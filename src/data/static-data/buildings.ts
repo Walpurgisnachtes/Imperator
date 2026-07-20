@@ -4,14 +4,6 @@ import type { BuildingRequirement } from "../../types/building-requirement";
 import type { MessageDescriptor } from "@lingui/core";
 import { v4 as UUIDv4 } from "uuid";
 
-let buildings: BuildingInfo[] = [];
-
-const buildingRegisterers: Set<BuildingInfo> = new Set();
-
-export function registerBuilding(registerer: BuildingInfo): void {
-  buildingRegisterers.add(registerer);
-}
-
 /**
  *
  * @param name Name of the building.
@@ -60,15 +52,4 @@ export function createDefaultBuilding(
     isDisabled: false,
     prioritizedInputs: {},
   };
-}
-
-export function loadBuildings(): void {
-  buildings = [];
-  for (const registerer of buildingRegisterers) {
-    buildings.push(registerer);
-  }
-}
-
-export function getBuildings(): BuildingInfo[] {
-  return buildings;
 }
