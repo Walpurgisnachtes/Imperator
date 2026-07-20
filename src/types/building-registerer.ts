@@ -1,10 +1,10 @@
-import type { BuildingInfo } from "./building-status";
+import type { BuildingData } from "./building-status";
 
-let buildings: BuildingInfo[] = [];
+let buildings: BuildingData[] = [];
 
-const buildingRegisterers: Set<BuildingInfo> = new Set();
+const buildingRegisterers: Set<BuildingData> = new Set();
 
-export function registerBuilding(registerer: BuildingInfo): void {
+export function registerBuilding(registerer: BuildingData): void {
   buildingRegisterers.add(registerer);
 }
 
@@ -15,6 +15,6 @@ export function loadBuildings(): void {
   }
 }
 
-export function getBuildings(): BuildingInfo[] {
+export function getBuildings(): BuildingData[] {
   return buildings;
 }

@@ -1,5 +1,5 @@
 import type { CityData } from "../types/city-data";
-import type { BuildingInfo } from "../types/building-status";
+import type { BuildingData } from "../types/building-status";
 import type { ProductionRecipe } from "../types/production-recipe";
 import { useLingui } from "@lingui/react/macro";
 
@@ -35,10 +35,10 @@ export function runProductionRound(city: CityData): {
   const prioritizedBuildings = activeBuildings.filter((b) => b.isPrioritized);
   const normalBuildings = activeBuildings.filter((b) => !b.isPrioritized);
 
-  const processProductionGroup = (buildingsGroup: BuildingInfo[]) => {
+  const processProductionGroup = (buildingsGroup: BuildingData[]) => {
     let remainingBuildings = [...buildingsGroup];
     let productionOccurred = true;
-    var nextRoundBuildings: BuildingInfo[] = [];
+    var nextRoundBuildings: BuildingData[] = [];
 
     while (productionOccurred && remainingBuildings.length > 0) {
       productionOccurred = false;

@@ -1,4 +1,4 @@
-import type { BuildingInfo } from "../../types/building-status";
+import type { BuildingData } from "../../types/building-status";
 import type { ProductionRecipe } from "../../types/production-recipe";
 import type { BuildingRequirement } from "../../types/building-requirement";
 import type { MessageDescriptor } from "@lingui/core";
@@ -29,7 +29,7 @@ export function createDefaultBuilding(
   maxHp?: number,
   productionStrengthCostMultiplier?: number,
   productionOutputMultiplier?: number,
-): BuildingInfo {
+): BuildingData {
   let hp = maxHp ?? 100;
 
   return {

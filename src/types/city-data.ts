@@ -1,4 +1,4 @@
-import type { BuildingInfo } from "./building-status";
+import type { BuildingData } from "./building-status";
 import { CityNameGenerator } from "../data/static-data/city-names";
 import { v4 as UUIDv4 } from "uuid";
 import type { GeometryLimitations } from "./geometry-limitations";
@@ -9,7 +9,7 @@ export interface CityData {
   // System info
   id: string;
   resources: { [resourceId: string]: number };
-  buildings: BuildingInfo[];
+  buildings: BuildingData[];
 
   // Visible info
   // Primum info
@@ -41,7 +41,7 @@ export interface CityData {
 export function createNewCityData(
   usedNames: number[],
   resources?: { [resourceId: string]: number },
-  buildings?: BuildingInfo[],
+  buildings?: BuildingData[],
   name?: number,
   population?: number,
   treasury?: number,

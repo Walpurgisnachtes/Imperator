@@ -1,5 +1,5 @@
-import type { BuildingInfo } from "./building-status";
+import type { BuildingData } from "./building-status";
 
 export interface BuildingProps {
-  building: BuildingInfo;
+  building: BuildingData;
 }
