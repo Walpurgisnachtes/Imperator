@@ -48,7 +48,7 @@ export const InformationHoverBox: FC<InformationHoverBoxProps> = ({
   let label = labelGetter(item);
   let value =
     item.id == "city-name"
-      ? CityNameGenerator.getCityName(Number(item.value))
+      ? CityNameGenerator.getCityName(String(item.value))
       : item.value;
 
   return (

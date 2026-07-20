@@ -1,5 +1,4 @@
 import type { BuildingData } from "./building-status";
-import { CityNameGenerator } from "../data/static-data/city-names";
 import { v4 as UUIDv4 } from "uuid";
 import type { GeometryLimitations } from "./geometry-limitations";
 
@@ -7,13 +6,13 @@ type AnimosityDirection = "none" | "this-city" | "friendly-city" | "enemy-city";
 
 export interface CityData {
   // System info
-  id: string;
+  uid: string;
   resources: { [resourceId: string]: number };
   buildings: BuildingData[];
 
   // Visible info
   // Primum info
-  name: number;
+  nameId: string;
 
   population: number; // Illimitatus
   treasury: number; // Illimitatus
@@ -40,10 +39,11 @@ export interface CityData {
 }
 
 export function createNewCityData(
-  usedNames: number[],
   resources?: { [resourceId: string]: number },
   buildings?: BuildingData[],
-  name?: number,
+  nameId?: string,
+  buildingLimit?: number,
+  geometryLimitations?: GeometryLimitations,
   population?: number,
   treasury?: number,
   happiness?: number,
@@ -60,32 +60,14 @@ export function createNewCityData(
   animosityStrength?: number,
   animosityDirection?: AnimosityDirection,
   warWearinessStrength?: number,
-  buildingLimit?: number,
-  geometryLimitations?: GeometryLimitations,
 ): CityData {
-  let getUniqueCityName = () => {
-    if (name) {
-      return name;
-    }
-    let randomName = 0;
-    let attempts = 0;
-    while (attempts < 100) {
-      randomName = CityNameGenerator.getRandomCityName();
-      if (!usedNames.includes(randomName)) {
-        break;
-      }
-      attempts++;
-    }
-    return randomName;
-  };
-
   return {
-    id: UUIDv4(),
+    uid: UUIDv4(),
     resources: resources ?? {},
     buildings: buildings ?? [],
-    name: getUniqueCityName(),
-    population: population ?? 0,
-    treasury: treasury ?? 0,
+    nameId: nameId ?? "",
+    population: population ?? 100,
+    treasury: treasury ?? 100,
     happiness: happiness ?? 100,
     stability: stability ?? 100,
     foodSupply: foodSupply ?? 0,

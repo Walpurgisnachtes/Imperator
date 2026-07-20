@@ -12,9 +12,9 @@ import { CityInfoStore } from "../types/city-info-store";
 export async function createNewGame(): Promise<void> {
   resetGameStatus();
 
-  const newCity = createNewCityData([]);
+  const newCity = createNewCityData();
   gameData.cities.push(newCity);
-  setCapitalCity(newCity.id);
+  setCapitalCity(newCity.uid);
 
   CityInfoStore.setCityInfo(createCityInfo(getCapitalCity()));
 }

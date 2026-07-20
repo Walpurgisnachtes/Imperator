@@ -5,7 +5,7 @@ import { i18n } from "@lingui/core";
 
 export function getCapitalCity(): CityData {
   let capitalCity = gameStatus.cities.find(
-    (city) => city.id === gameStatus.capitalId,
+    (city) => city.uid === gameStatus.capitalId,
   );
   if (capitalCity) {
     return capitalCity;
@@ -16,7 +16,7 @@ export function getCapitalCity(): CityData {
 }
 
 export function setCapitalCity(cityId: string): void {
-  const city = gameStatus.cities.find((city) => city.id === cityId);
+  const city = gameStatus.cities.find((city) => city.uid === cityId);
   if (city) {
     gameStatus.capitalId = cityId;
   }

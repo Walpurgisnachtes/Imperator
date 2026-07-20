@@ -69,7 +69,7 @@ export const InformationColumn: React.FC<InformationColumnProps> = ({
 
   const valueGetter = (item: Information) =>
     item.id == "city-name"
-      ? CityNameGenerator.getCityName(Number(item.value))
+      ? CityNameGenerator.getCityName(String(item.value))
       : item.value;
 
   const filteredItems = {
