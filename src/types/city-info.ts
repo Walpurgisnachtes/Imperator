@@ -17,7 +17,7 @@ export const defaultCityInfo: CityInfo = createCityInfo({
   uid: "0",
   resources: {},
   buildings: [],
-  nameId: 0,
+  nameId: "city-name-italia",
   population: 0,
   treasury: 0,
   happiness: 0,
@@ -34,6 +34,7 @@ export const defaultCityInfo: CityInfo = createCityInfo({
   animosityStrength: 0,
   animosityDirection: "none",
   warWearinessStrength: 0,
+  buildingLimit: 0,
   geometryLimitations: { allows: {}, prohibits: {} },
 });
 
