@@ -6,7 +6,7 @@ import { msg } from "@lingui/core/macro";
 import { registerBuilding } from "../../../types/building-registerer";
 
 let buildingName: MessageDescriptor = msg`Vineyard`;
-let buildingNameId: string = "vineyard";
+let buildingNameId: string = "building-vineyard";
 let buildingDescription: MessageDescriptor = msg`Provides grapes for the population.\nIt is widely used in making wine.`;
 let buildingProduction: ProductionRecipe[] = [
     {

@@ -6,7 +6,7 @@ import { msg } from "@lingui/core/macro";
 import { registerBuilding } from "../../../types/building-registerer";
 
 let buildingName: MessageDescriptor = msg`Papyrus Plantation`;
-let buildingNameId: string = "papyrus-plantation";
+let buildingNameId: string = "building-papyrus-plantation";
 let buildingDescription: MessageDescriptor = msg`Provides papyrus, a writing material.\nPapyrus is widely used for writing and record-keeping, which benefits administration and research.`;
 let buildingProduction: ProductionRecipe[] = [
     {
