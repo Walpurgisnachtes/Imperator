@@ -6,7 +6,9 @@ import { dynamicActivate } from "./i18n";
 import "./index.css";
 import App from "./App.tsx";
 import { createNewGame } from "./scripts/game-loader.ts";
+import { registerAllDefaultCities } from "./data/static-data/default-city-data.ts";
 import { loadBuildings } from "./types/building-registerer.ts";
+import { loadCities } from "./types/city-registerer.ts";
 
 // Load game materials
 import "./data/static-data/buildings/_index.ts";
@@ -18,6 +20,8 @@ function Root(): React.JSX.Element {
     (async () => {
       await dynamicActivate("en");
       loadBuildings();
+      registerAllDefaultCities();
+      loadCities();
       await createNewGame();
     })()
       .then(() => {
