@@ -11,6 +11,9 @@ export function registerCity(city: CityData): void {
 export function loadCities(): void {
   cities = [];
   for (const registerer of cityRegisterers) {
+    if (cities.find((city) => city.nameId === registerer.nameId)) {
+      console.error(`Duplicate city nameId found: ${registerer.nameId}`);
+    }
     cities.push(registerer);
   }
 }

@@ -11,6 +11,9 @@ export function registerBuilding(registerer: BuildingData): void {
 export function loadBuildings(): void {
   buildings = [];
   for (const registerer of buildingRegisterers) {
+    if (buildings.find((building) => building.nameId === registerer.nameId)) {
+      console.error(`Duplicate building nameId found: ${registerer.nameId}`);
+    }
     buildings.push(registerer);
   }
 }
