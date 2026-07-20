@@ -19,6 +19,10 @@ export function getBuildings(): BuildingData[] {
   return buildings;
 }
 
+export function getBuildingByUid(uid: string): BuildingData | undefined {
+  return buildings.find((building) => building.uid === uid);
+}
+
 export function getBuildingByName(nameId: string): BuildingData | undefined {
   return buildings.find((building) => building.nameId === nameId);
 }

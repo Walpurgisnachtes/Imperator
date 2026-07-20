@@ -19,6 +19,10 @@ export function getCities(): CityData[] {
   return cities;
 }
 
+export function getCityByUid(uid: string): CityData | undefined {
+  return cities.find((city) => city.uid === uid);
+}
+
 export function getCityByName(nameId: string): CityData | undefined {
   return cities.find((city) => city.nameId === nameId);
 }
