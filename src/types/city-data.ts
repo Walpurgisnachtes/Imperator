@@ -35,6 +35,7 @@ export interface CityData {
   animosityStrength: number; // Maximus: 100, Minimus: 0
   animosityDirection: AnimosityDirection;
   warWearinessStrength: number; // Maximus: 100, Minimus: 0
+  buildingLimit: number; // Illimitatus
   geometryLimitations: GeometryLimitations;
 }
 
@@ -59,6 +60,7 @@ export function createNewCityData(
   animosityStrength?: number,
   animosityDirection?: AnimosityDirection,
   warWearinessStrength?: number,
+  buildingLimit?: number,
   geometryLimitations?: GeometryLimitations,
 ): CityData {
   let getUniqueCityName = () => {
@@ -98,6 +100,7 @@ export function createNewCityData(
     animosityStrength: animosityStrength ?? 0,
     animosityDirection: animosityDirection ?? "none",
     warWearinessStrength: warWearinessStrength ?? 0,
+    buildingLimit: buildingLimit ?? 0,
     geometryLimitations: geometryLimitations ?? { allows: {}, prohibits: {} },
   };
 }
