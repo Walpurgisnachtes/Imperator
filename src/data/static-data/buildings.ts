@@ -2,7 +2,6 @@ import type { BuildingData } from "../../types/building-status";
 import type { ProductionRecipe } from "../../types/production-recipe";
 import type { BuildingRequirement } from "../../types/building-requirement";
 import type { MessageDescriptor } from "@lingui/core";
-import { v4 as UUIDv4 } from "uuid";
 
 /**
  *
@@ -34,7 +33,7 @@ export function createDefaultBuilding(
   let hp = maxHp ?? 100;
 
   return {
-    uid: UUIDv4(),
+    uid: "",
     name,
     nameId,
     description,

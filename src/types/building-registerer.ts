@@ -1,4 +1,5 @@
 import type { BuildingData } from "./building-status";
+import { v4 as UUIDv4 } from "uuid";
 
 let buildings: BuildingData[] = [];
 
@@ -28,4 +29,11 @@ export function getBuildingByUid(uid: string): BuildingData | undefined {
 
 export function getBuildingByName(nameId: string): BuildingData | undefined {
   return buildings.find((building) => building.nameId === nameId);
+}
+
+export function cloneBuilding(building: BuildingData): BuildingData {
+  return {
+    ...building,
+    uid: UUIDv4(),
+  };
 }
