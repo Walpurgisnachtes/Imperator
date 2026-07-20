@@ -34,7 +34,7 @@ export function createDefaultBuilding(
   let hp = maxHp ?? 100;
 
   return {
-    id: UUIDv4(),
+    uid: UUIDv4(),
     name,
     nameId,
     description,

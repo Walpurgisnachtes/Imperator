@@ -71,7 +71,7 @@ export function runProductionRound(city: CityData): {
           );
 
           productionLog.push(
-            t`Building [${building.name} (ID: ${building.id})] produced resources using recipe [${building.activeRecipeIndex}]`,
+            t`Building [${building.name} (ID: ${building.uid})] produced resources using recipe [${building.activeRecipeIndex}]`,
           );
           recipeExecuted = true;
           productionOccurred = true;
@@ -94,7 +94,7 @@ export function runProductionRound(city: CityData): {
 
   return {
     updatedInventory: inventory,
-    noProductionBuildingIds: noProductionBuildings.map(b => b.id),
+    noProductionBuildingIds: noProductionBuildings.map(b => b.uid),
     productionLog,
   };
 }

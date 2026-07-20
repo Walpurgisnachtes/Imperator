@@ -2,7 +2,7 @@ import type { ProductionRecipe } from "./production-recipe";
 import type { BuildingRequirement } from "./building-requirement";
 import type { MessageDescriptor } from "@lingui/core";
 export interface BuildingData {
-  id: string;
+  uid: string;
   name: MessageDescriptor;
   nameId: string;
   description: MessageDescriptor;

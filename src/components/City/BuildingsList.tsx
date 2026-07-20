@@ -19,7 +19,7 @@ export const BuildingsList: React.FC<{ data: CityData }> = ({ data }) => {
       <ul>
         {data.buildings.map((building, idx) => (
           <li
-            key={building.id}
+            key={building.uid}
             className={`text-lg font-bold text-slate-100 ${idx < data.buildings.length - 1 || canBuildMore ? `border-b border-slate-700 pb-2` : ``}`}
           >
             
