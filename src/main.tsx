@@ -5,7 +5,7 @@ import { i18n } from "@lingui/core";
 import { dynamicActivate } from "./i18n";
 import "./index.css";
 import App from "./App.tsx";
-import { createNewGame } from "./scripts/game-loader.ts";
+import { createNewGame } from "./scripts/create-new-game.ts";
 import { registerAllDefaultCities } from "./data/static-data/default-city-data.ts";
 import { loadBuildings } from "./types/building-registerer.ts";
 import { loadCities } from "./types/city-registerer.ts";
