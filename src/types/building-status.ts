@@ -4,6 +4,7 @@ import type { MessageDescriptor } from "@lingui/core";
 export interface BuildingData {
   id: string;
   name: MessageDescriptor;
+  nameId: string;
   description: MessageDescriptor;
   tags: string[];
   requirements?: BuildingRequirement;

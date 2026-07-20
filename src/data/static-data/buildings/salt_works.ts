@@ -6,6 +6,7 @@ import { msg } from "@lingui/core/macro";
 import { registerBuilding } from "../../../types/building-registerer";
 
 let buildingName: MessageDescriptor = msg`Salt Works`;
+let buildingNameId: string = "salt-works";
 let buildingDescription: MessageDescriptor = msg`Provides salt.\nSalt is mainly used for preserving food.\nIt can also be used as medicine.\nFor these reasons, salt is a very valuable resource.`;
 let buildingProduction: ProductionRecipe[] = [
     {
@@ -31,6 +32,7 @@ let buildingProductionOutputMultiplier: number = 1;
 registerBuilding(
   createDefaultBuilding(
     buildingName,
+    buildingNameId,
     buildingDescription,
     buildingProduction,
     buildingTags,

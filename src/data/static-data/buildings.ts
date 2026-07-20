@@ -20,6 +20,7 @@ import { v4 as UUIDv4 } from "uuid";
  */
 export function createDefaultBuilding(
   name: MessageDescriptor,
+  nameId: string,
   description: MessageDescriptor,
   recipes: ProductionRecipe[],
   tags?: string[],
@@ -35,6 +36,7 @@ export function createDefaultBuilding(
   return {
     id: UUIDv4(),
     name,
+    nameId,
     description,
     tags: tags ?? [],
     requirements: requirements ?? {},

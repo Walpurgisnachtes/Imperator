@@ -6,6 +6,7 @@ import { msg } from "@lingui/core/macro";
 import { registerBuilding } from "../../../types/building-registerer";
 
 let buildingName: MessageDescriptor = msg`Sheep Ranch`;
+let buildingNameId: string = "sheep-ranch";
 let buildingDescription: MessageDescriptor = msg`Provides wools or mutton.\nWool is necessary for making clothes.`;
 let buildingProduction: ProductionRecipe[] = [
   {
@@ -42,6 +43,7 @@ let buildingProductionOutputMultiplier: number = 1;
 registerBuilding(
   createDefaultBuilding(
     buildingName,
+    buildingNameId,
     buildingDescription,
     buildingProduction,
     buildingTags,
