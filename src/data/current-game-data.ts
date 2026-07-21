@@ -39,10 +39,6 @@ export function addCity(newCity: CityData): void {
   gameData.cities.push(newCity);
 }
 
-export function updateCapitalId(newCapitalId: string): void {
-  gameData.capitalId = newCapitalId;
-}
-
 export function getCapitalCity(): CityData {
   let capitalCity = gameData.cities.find(
     (city) => city.uid === gameData.capitalId,
@@ -58,7 +54,7 @@ export function getCapitalCity(): CityData {
 export function updateCapitalCity(cityId: string): void {
   const city = gameData.cities.find((city) => city.uid === cityId);
   if (city) {
-    updateCapitalId(cityId);
+    gameData.capitalId = cityId;
   }
 }
 
@@ -74,7 +70,13 @@ export function updateBuildingInCity(
       (building) => building.uid === buildingUid,
     );
     if (buildingIndex !== -1) {
-      gameData.cities[cityIndex].buildings[buildingIndex] = newBuildingData;
+      const shouldUpdateBuilding =
+        gameData.cities[cityIndex].buildings[buildingIndex];
+
+      gameData.cities[cityIndex].buildings[buildingIndex] = {
+        ...shouldUpdateBuilding,
+        ...newBuildingData,
+      };
     } else {
       console.error(
         `Building with UID ${buildingUid} not found in city ${cityUid}.`,
@@ -94,6 +96,27 @@ export function addBuildingToCity(
   if (cityIndex !== -1) {
     for (let i = 0; i < duplicates; i++) {
       gameData.cities[cityIndex].buildings.push(newBuildingData);
+    }
+  } else {
+    console.error(`City with UID ${cityUid} not found.`);
+  }
+}
+
+export function removeBuildingFromCity(
+  cityUid: string,
+  buildingUid: string,
+): void {
+  const cityIndex = gameData.cities.findIndex((city) => city.uid === cityUid);
+  if (cityIndex !== -1) {
+    const buildingIndex = gameData.cities[cityIndex].buildings.findIndex(
+      (building) => building.uid === buildingUid,
+    );
+    if (buildingIndex !== -1) {
+      gameData.cities[cityIndex].buildings.splice(buildingIndex, 1);
+    } else {
+      console.error(
+        `Building with UID ${buildingUid} not found in city ${cityUid}.`,
+      );
     }
   } else {
     console.error(`City with UID ${cityUid} not found.`);
