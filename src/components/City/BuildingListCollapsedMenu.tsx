@@ -5,6 +5,7 @@ import type { ProductionRecipe } from "../../types/production-recipe";
 import type { MessageDescriptor } from "@lingui/core";
 import type { Dispatch, SetStateAction } from "react";
 import { BuildingRecipe } from "./BuildingRecipe";
+import { ToggleSwitch } from "../ToggleSwitch";
 
 interface BuildingListContentCollapsedMenuProps {
   building_uid: string;
@@ -85,31 +86,27 @@ export const BuildingListContentCollapsedMenu: React.FC<
       <div className="flex flex-col gap-3">
         <label className="flex items-center justify-between gap-4 rounded-lg border border-slate-700/60 bg-slate-900/40 px-3 py-2">
           <span className="text-sm text-slate-100">{t`Prioritize Building`}</span>
-          <input
-            type="checkbox"
+          <ToggleSwitch
             checked={building_isPrioritized}
-            onChange={(event) => {
+            onChange={(checked) => {
               onDataUpdate(building_uid, {
-                isPrioritized: event.target.checked,
+                isPrioritized: checked,
               });
-              onIsPrioritizedChange?.(event.target.checked);
+              onIsPrioritizedChange?.(checked);
             }}
-            className="h-4 w-4 accent-amber-400"
           />
         </label>
 
         <label className="flex items-center justify-between gap-4 rounded-lg border border-slate-700/60 bg-slate-900/40 px-3 py-2">
           <span className="text-sm text-slate-100">{t`Disable Building`}</span>
-          <input
-            type="checkbox"
+          <ToggleSwitch
             checked={building_isDisabled}
-            onChange={(event) => {
+            onChange={(checked) => {
               onDataUpdate(building_uid, {
-                isDisabled: event.target.checked,
+                isDisabled: checked,
               });
-              onIsDisabledChange?.(event.target.checked);
+              onIsDisabledChange?.(checked);
             }}
-            className="h-4 w-4 accent-rose-400"
           />
         </label>
       </div>
