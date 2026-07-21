@@ -44,7 +44,6 @@ export const InformationHoverBox: FC<InformationHoverBoxProps> = ({
         </Fragment>
       ));
 
-  const translateY = position.y < window.innerHeight / 2 ? "-100%" : "-150%";
   let label = labelGetter(item);
   let value =
     item.id == "city-name"
@@ -55,9 +54,8 @@ export const InformationHoverBox: FC<InformationHoverBoxProps> = ({
     <div
       className="pointer-events-none fixed z-50 min-w-sm max-w-lg rounded-lg border border-slate-700/70 bg-slate-800/90 p-3 text-slate-100 shadow-lg shadow-slate-950/40 backdrop-blur-sm"
       style={{
-        left: position.x,
-        top: position.y,
-        transform: `translate(calc(-3vw), ${translateY})`,
+        left: position.x + 15,
+        top: position.y + 15,
       }}
     >
       <p className="flex flex-row justify-between text-sm text-left font-bold border-b border-slate-700 pb-2">

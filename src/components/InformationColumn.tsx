@@ -4,6 +4,7 @@ import type { Information, InformationColumnProps } from "../types/information";
 import { InformationHoverBox } from "./InformationHoverBox";
 import { CityNameGenerator } from "../data/static-data/city-names";
 import { i18n } from "@lingui/core";
+import { createPortal } from "react-dom";
 
 interface HoveredInformation {
   item: Information;
@@ -165,12 +166,15 @@ export const InformationColumn: React.FC<InformationColumnProps> = ({
           </ul>
         )}
       </div>
-      {hoveredInformation ? (
-        <InformationHoverBox
-          item={hoveredInformation.item}
-          position={hoveredInformation.position}
-        />
-      ) : null}
+      {hoveredInformation
+        ? createPortal(
+            <InformationHoverBox
+              item={hoveredInformation.item}
+              position={hoveredInformation.position}
+            />,
+            document.body,
+          )
+        : null}
     </div>
   );
 };
