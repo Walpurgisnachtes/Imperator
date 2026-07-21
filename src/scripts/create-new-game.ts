@@ -1,8 +1,5 @@
 import { getCapitalCity, setCapitalCity } from "../data/capital-city";
-import {
-  resetGameStatus,
-  gameStatus as gameData,
-} from "../data/static-data/game-data";
+import { resetGameStatus, gameData } from "../data/static-data/game-data";
 import { getBuildingByName, cloneBuilding } from "../types/building-registerer";
 import { createCityInfo } from "../types/city-info";
 import { CityInfoStore } from "../types/city-info-store";

@@ -1,6 +1,6 @@
 import type { GameStatus } from "../../types/game-status";
 
-export const gameStatus: GameStatus = {
+export const gameData: GameStatus = {
   hash: "",
   gameVersion: "",
   cities: [],
@@ -8,8 +8,8 @@ export const gameStatus: GameStatus = {
 };
 
 export function resetGameStatus(): void {
-  gameStatus.hash = "";
-  gameStatus.gameVersion = "";
-  gameStatus.cities = [];
-  gameStatus.capitalId = "";
+  gameData.hash = "";
+  gameData.gameVersion = "";
+  gameData.cities = [];
+  gameData.capitalId = "";
 }

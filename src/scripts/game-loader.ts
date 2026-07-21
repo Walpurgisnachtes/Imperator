@@ -1,6 +1,4 @@
-import {
-  gameStatus as gameData,
-} from "../data/static-data/game-data";
+import { gameData } from "../data/static-data/game-data";
 import type { GameStatus } from "../types/game-status";
 import { createCityInfo } from "../types/city-info";
 import { getCapitalCity } from "../data/capital-city";
