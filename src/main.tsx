@@ -1,4 +1,4 @@
-import { StrictMode, useState, useEffect } from "react";
+import { StrictMode, useState, useEffect, useRef } from "react";
 import { createRoot } from "react-dom/client";
 import { I18nProvider } from "@lingui/react";
 import { i18n } from "@lingui/core";
@@ -15,22 +15,20 @@ import "./data/static-data/buildings/_index.ts";
 
 function Root(): React.JSX.Element {
   const [loading, setLoading] = useState<boolean>(true);
+  const initialized = useRef(false);
 
   useEffect(() => {
+    if (initialized.current) return;
+    initialized.current = true;
+
     (async () => {
       await dynamicActivate("en");
       loadBuildings();
       registerAllDefaultCities();
       loadCities();
       await createNewGame();
-    })()
-      .then(() => {
-        setLoading(false);
-      })
-      .catch((err) => {
-        console.error("Failed to load:", err);
-        setLoading(false);
-      });
+      setLoading(false);
+    })().catch(console.error);
   }, []);
 
   if (loading) {
