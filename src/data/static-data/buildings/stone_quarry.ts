@@ -12,7 +12,7 @@ let buildingProduction: ProductionRecipe[] = [
     {
       inputs: {},
       outputs: {
-        clay: 10,
+        stone: 10,
       },
       productionStrengthCost: 10,
     }
@@ -20,7 +20,7 @@ let buildingProduction: ProductionRecipe[] = [
 let buildingTags: string[] = ["mining"];
 let buildingRequirements: BuildingRequirement = {
   allows: {
-    clay: 1,
+    stone: 1,
   },
 };
 let buildingCost: number = 0;
