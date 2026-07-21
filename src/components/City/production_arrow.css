@@ -1,0 +1,60 @@
+.production-arrow-frame {
+  position: absolute;
+  inset: 0;
+
+  opacity: 0;
+}
+
+.production-arrow-frame.frame1 {
+  opacity: 1;
+}
+
+/* Play animation only on hover */
+.recipe-container:hover .group .production-arrow-frame.frame1 {
+  animation: production-arrow-frame1 300ms steps(1) infinite;
+}
+
+.recipe-container:hover .group .production-arrow-frame.frame2 {
+  animation: production-arrow-frame2 300ms steps(1) infinite;
+}
+
+.recipe-container:hover .group .production-arrow-frame.frame3 {
+  animation: production-arrow-frame3 300ms steps(1) infinite;
+}
+
+@keyframes production-arrow-frame1 {
+  0%,
+  33% {
+    opacity: 1;
+  }
+  34%,
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes production-arrow-frame2 {
+  0%,
+  33% {
+    opacity: 0;
+  }
+  34%,
+  66% {
+    opacity: 1;
+  }
+  67%,
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes production-arrow-frame3 {
+  0%,
+  66% {
+    opacity: 0;
+  }
+  67%,
+  100% {
+    opacity: 1;
+  }
+}
