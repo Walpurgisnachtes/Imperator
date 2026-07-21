@@ -1,6 +1,9 @@
-import { getCapitalCity, updateCapitalCity } from "../data/current-game-data";
+import {
+  addBuildingToCity,
+  getCapitalCity,
+  updateCapitalCity,
+} from "../data/current-game-data";
 import { resetGameData, addCity } from "../data/current-game-data";
-import { getBuildingByName, cloneBuilding } from "../types/building-registerer";
 import { createCityInfo } from "../types/city-info";
 import { CityInfoStore } from "../types/city-info-store";
 import { getCityByName } from "../types/city-registerer";
@@ -25,8 +28,5 @@ function initFirstCity() {
   updateCapitalCity(newCity.uid);
 
   // Give 2 starting wheat farms (ignore resource and primary sector building limit)
-  const wheatFarmBuilding = getBuildingByName("building-wheat-farm");
-  newCity.buildings.push(
-    ...Array.from({ length: 2 }, () => cloneBuilding(wheatFarmBuilding!)),
-  );
+  addBuildingToCity(newCity.uid, "building-wheat-farm", 2);
 }

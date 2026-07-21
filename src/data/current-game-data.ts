@@ -1,3 +1,4 @@
+import { cloneBuilding, getBuildingByName } from "../types/building-registerer";
 import type { BuildingData } from "../types/building-status";
 import type { CityData } from "../types/city-data";
 import type { GameData } from "../types/game-data";
@@ -31,6 +32,14 @@ export function getGameData(): GameData {
 }
 
 // region: City Management
+export function getCities(): CityData[] {
+  return gameData.cities;
+}
+
+export function getCityByUid(uid: string): CityData | undefined {
+  return gameData.cities.find((city) => city.uid === uid);
+}
+
 export function updateCities(newCities: CityData[]): void {
   gameData.cities = newCities;
 }
@@ -59,10 +68,39 @@ export function updateCapitalCity(cityId: string): void {
 }
 
 // region: Building Management
+export function getBuildingInCity(
+  cityUid: string,
+  buildingUid: string,
+): BuildingData | undefined {
+  const city = gameData.cities.find((city) => city.uid === cityUid);
+  if (city) {
+    return city.buildings.find((building) => building.uid === buildingUid);
+  } else {
+    console.error(`City with UID ${cityUid} not found.`);
+    return undefined;
+  }
+}
+
 export function updateBuildingInCity(
   cityUid: string,
   buildingUid: string,
-  newBuildingData: BuildingData,
+  newBuildingData: Partial<
+    Pick<
+      BuildingData,
+      | "name"
+      | "level"
+      | "constructionCost"
+      | "maintenanceCost"
+      | "isUnderConstruction"
+      | "hp"
+      | "maxHp"
+      | "activeRecipeIndex"
+      | "productionOutputMultiplier"
+      | "productionStrengthCostMultiplier"
+      | "isPrioritized"
+      | "isDisabled"
+    >
+  >,
 ): void {
   const cityIndex = gameData.cities.findIndex((city) => city.uid === cityUid);
   if (cityIndex !== -1) {
@@ -89,14 +127,16 @@ export function updateBuildingInCity(
 
 export function addBuildingToCity(
   cityUid: string,
-  newBuildingData: BuildingData,
+  newBuildingName: string,
   duplicates: number = 1,
 ): void {
   const cityIndex = gameData.cities.findIndex((city) => city.uid === cityUid);
   if (cityIndex !== -1) {
-    for (let i = 0; i < duplicates; i++) {
-      gameData.cities[cityIndex].buildings.push(newBuildingData);
-    }
+    gameData.cities[cityIndex].buildings.push(
+      ...Array.from({ length: duplicates }, () =>
+        cloneBuilding(getBuildingByName(newBuildingName)!),
+      ),
+    );
   } else {
     console.error(`City with UID ${cityUid} not found.`);
   }
