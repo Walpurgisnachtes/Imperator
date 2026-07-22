@@ -14,55 +14,55 @@ import CultureButton from "../assets/theater.svg?react";
 import ReligionButton from "../assets/religion.svg?react";
 
 export interface CityAction {
-  actionName: CityActionType;
-  actionTitle: MessageDescriptor;
+  actionType: CityActionType;
+  actionName: MessageDescriptor;
   imageComponent: FC<SVGProps<SVGSVGElement>>;
 }
 
 export const cityActions: CityAction[] = [
   {
-    actionName: "city/building",
-    actionTitle: msg`Buildings`,
+    actionType: "city/building",
+    actionName: msg`Buildings`,
     imageComponent: BuildingsButton,
   },
   {
-    actionName: "city/trade",
-    actionTitle: msg`Trade`,
+    actionType: "city/trade",
+    actionName: msg`Trade`,
     imageComponent: TradeButton,
   },
   {
-    actionName: "city/military",
-    actionTitle: msg`Military`,
+    actionType: "city/military",
+    actionName: msg`Military`,
     imageComponent: MilitaryButton,
   },
   {
-    actionName: "city/intelligence",
-    actionTitle: msg`Intelligence`,
+    actionType: "city/intelligence",
+    actionName: msg`Intelligence`,
     imageComponent: IntelligenceButton,
   },
   {
-    actionName: "city/politics",
-    actionTitle: msg`Politics`,
+    actionType: "city/politics",
+    actionName: msg`Politics`,
     imageComponent: PoliticsButton,
   },
   {
-    actionName: "city/diplomacy",
-    actionTitle: msg`Diplomacy`,
+    actionType: "city/diplomacy",
+    actionName: msg`Diplomacy`,
     imageComponent: DiplomacyButton,
   },
   {
-    actionName: "city/research",
-    actionTitle: msg`Research`,
+    actionType: "city/research",
+    actionName: msg`Research`,
     imageComponent: ResearchButton,
   },
   {
-    actionName: "city/culture",
-    actionTitle: msg`Culture`,
+    actionType: "city/culture",
+    actionName: msg`Culture`,
     imageComponent: CultureButton,
   },
   {
-    actionName: "city/religion",
-    actionTitle: msg`Religion`,
+    actionType: "city/religion",
+    actionName: msg`Religion`,
     imageComponent: ReligionButton,
   },
 ];
