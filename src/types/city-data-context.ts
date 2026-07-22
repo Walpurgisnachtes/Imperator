@@ -3,10 +3,10 @@ import {createContext} from "react";
 
 export const CityDataContext = createContext<CityData>(
   {
-    id: "",
+    uid: "",
     resources: {},
     buildings: [],
-    name: "",
+    nameId: "city-name-italia",
     population: 0,
     treasury: 0,
     happiness: 0,
@@ -23,5 +23,7 @@ export const CityDataContext = createContext<CityData>(
     animosityStrength: 0,
     animosityDirection: "none",
     warWearinessStrength: 0,
+    buildingLimit: 0,
+    geometryLimitations: { allows: {}, prohibits: {} },
   }
 );

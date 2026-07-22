@@ -1,22 +1,42 @@
-import { StrictMode, useState, useEffect } from 'react'
-import { createRoot } from 'react-dom/client'
+import { StrictMode, useState, useEffect, useRef } from "react";
+import { createRoot } from "react-dom/client";
 import { I18nProvider } from "@lingui/react";
 import { i18n } from "@lingui/core";
 import { dynamicActivate } from "./i18n";
-import './index.css'
-import App from './App.tsx'
+import "./index.css";
+import App from "./App.tsx";
+import { createNewGame } from "./scripts/create-new-game.ts";
+import { registerAllDefaultCities } from "./data/static-data/default-city-data.ts";
+import { loadBuildings } from "./types/building-registerer.ts";
+import { loadCities } from "./types/city-registerer.ts";
+
+// Load game materials
+import "./data/static-data/buildings/_index.ts";
 
 function Root(): React.JSX.Element {
   const [loading, setLoading] = useState<boolean>(true);
+  const initialized = useRef(false);
 
   useEffect(() => {
-    dynamicActivate("en")
-      .then(() => setLoading(false))
-      .catch((err) => console.error("Failed to load translation:", err));
+    if (initialized.current) return;
+    initialized.current = true;
+
+    (async () => {
+      await dynamicActivate("en");
+      loadBuildings();
+      registerAllDefaultCities();
+      loadCities();
+      await createNewGame();
+      setLoading(false);
+    })().catch(console.error);
   }, []);
 
   if (loading) {
-    return <div className="flex h-screen items-center justify-center">Loading...</div>;
+    return (
+      <div className="flex h-screen items-center justify-center">
+        Loading...
+      </div>
+    );
   }
 
   return (
@@ -36,4 +56,4 @@ createRoot(rootElement).render(
   <StrictMode>
     <Root />
   </StrictMode>,
-)
+);

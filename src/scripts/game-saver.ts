@@ -1,6 +1,6 @@
-import type { GameStatus } from "../types/game-status";
+import type { GameData } from "../types/game-data";
 
-export async function saveGameData(gameStatus: GameStatus): Promise<void> {
+export async function saveGameData(gameStatus: GameData): Promise<void> {
   gameStatus.hash = await (async () => {
     const json = JSON.stringify(gameStatus);
     const encoder = new TextEncoder();

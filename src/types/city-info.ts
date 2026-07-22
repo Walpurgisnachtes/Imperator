@@ -14,10 +14,10 @@ export interface CityInfo {
 export const cityInfoUpdateEventName = "city-info-updated";
 
 export const defaultCityInfo: CityInfo = createCityInfo({
-  id: "0",
+  uid: "0",
   resources: {},
   buildings: [],
-  name: "",
+  nameId: "city-name-italia",
   population: 0,
   treasury: 0,
   happiness: 0,
@@ -34,6 +34,8 @@ export const defaultCityInfo: CityInfo = createCityInfo({
   animosityStrength: 0,
   animosityDirection: "none",
   warWearinessStrength: 0,
+  buildingLimit: 0,
+  geometryLimitations: { allows: {}, prohibits: {} },
 });
 
 export function createCityInfo(city: CityData): CityInfo {
@@ -42,13 +44,13 @@ export function createCityInfo(city: CityData): CityInfo {
       {
         id: "city-id",
         label: `ID`,
-        value: city.id,
+        value: city.uid,
         hidden: true,
       },
       {
         id: "city-name",
         label: msg`Name`,
-        value: city.name,
+        value: city.nameId,
       },
       {
         id: "city-population",
