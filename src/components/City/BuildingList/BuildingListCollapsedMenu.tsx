@@ -61,7 +61,7 @@ export const BuildingListContentCollapsedMenu: React.FC<
             building_recipes.map((_, recipeIndex) => (
               <button
                 key={recipeIndex}
-                className="w-full rounded-full bg-slate-800/50 px-4 py-2 text-sm font-semibold text-slate-300 shadow-md shadow-slate-900/10 hover:shadow-slate-900/20 border-4 border-gray-800 disabled:border-amber-600 hover:not-disabled:brightness-110 transition-all duration-200"
+                className="w-full rounded-full bg-slate-800/50 px-4 py-2 text-sm font-semibold text-slate-300 shadow-md shadow-slate-900/10 hover:shadow-slate-900/20 border-4 border-gray-800 disabled:border-amber-600 hover:not-disabled:brightness-150 transition-all duration-200"
                 onClick={() => {
                   onDataUpdate(building_uid, {
                     activeRecipeIndex: recipeIndex,
