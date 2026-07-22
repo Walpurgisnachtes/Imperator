@@ -4,7 +4,7 @@ import { i18n, type MessageDescriptor } from "@lingui/core";
 import {
   GameContentHTMLContextStore,
   type GameContentHTMLContext,
-} from "../../../types/game-content-html-context-store";
+} from "../../../types/city-action-context-store";
 
 interface CityActionButtonProps {
   imageComponent: FC<SVGProps<SVGSVGElement>>;

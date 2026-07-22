@@ -1,7 +1,7 @@
 import type { FC } from "react";
 import { InformationColumn } from "./InformationColumn";
 import { GameContent } from "./GameContent";
-import { GameContentHTMLContextStore } from "../types/game-content-html-context-store";
+import { GameContentHTMLContextStore } from "../types/city-action-context-store";
 import { getCityStatusImage } from "../data/city-status";
 import { useSyncExternalStore } from "react";
 import { CityInfoStore } from "../types/city-info-store";

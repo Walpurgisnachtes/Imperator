@@ -1,6 +1,6 @@
 import { useState, type FC } from "react";
 import { CityActionButton } from "./CityActionButton";
-import type { GameContentHTMLContext } from "../../../types/game-content-html-context-store";
+import type { GameContentHTMLContext } from "../../../types/city-action-context-store";
 import { cityActions } from "../../../types/city-action";
 
 export const CityActionSelector: FC = () => {

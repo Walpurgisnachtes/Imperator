@@ -1,5 +1,5 @@
 import type { FC, SVGProps } from "react";
-import type { GameContentHTMLContext } from "./game-content-html-context-store";
+import type { GameContentHTMLContext } from "./city-action-context-store";
 import type { MessageDescriptor } from "@lingui/core";
 import { msg } from "@lingui/core/macro";
 
