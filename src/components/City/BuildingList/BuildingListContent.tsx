@@ -1,11 +1,11 @@
 import { useState } from "react";
-import type { BuildingData } from "../../types/building-status";
+import type { BuildingData } from "../../../types/building-status";
 import { i18n, type MessageDescriptor } from "@lingui/core";
 import { useLingui } from "@lingui/react/macro";
 
-import RenameBuildingIcon from "../../assets/pencil_square.svg?react";
-import CollapseMenuIcon from "../../assets/x_mark.svg?react";
-import ShowMenuIcon from "../../assets/bars-3.svg?react";
+import RenameBuildingIcon from "../../../assets/pencil_square.svg?react";
+import CollapseMenuIcon from "../../../assets/x_mark.svg?react";
+import ShowMenuIcon from "../../../assets/bars-3.svg?react";
 import { BuildingListContentCollapsedMenu } from "./BuildingListCollapsedMenu";
 
 type BuildingListContentProps = {

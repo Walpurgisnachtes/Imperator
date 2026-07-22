@@ -7,13 +7,13 @@ import ProductionArrowFrame3 from "../../assets/production_arrow/production_arro
 
 import "./production_arrow.css";
 
-interface BuildingRecipeProps {
+interface IORecipeProps {
   recipe: ProductionRecipe;
   productionStrengthCostMultiplier: number;
   productionOutputMultiplier: number;
 }
 
-export const BuildingRecipe: FC<BuildingRecipeProps> = ({
+export const InputOutputRecipe: FC<IORecipeProps> = ({
   recipe,
   productionStrengthCostMultiplier,
   productionOutputMultiplier,

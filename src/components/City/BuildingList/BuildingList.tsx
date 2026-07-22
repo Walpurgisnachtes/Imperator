@@ -1,10 +1,10 @@
 import React, { useState } from "react";
-import type { CityData } from "../../types/city-data";
-import type { BuildingData } from "../../types/building-status";
-import { updateBuildingInCity } from "../../data/current-game-data";
-import { getGameRuleValueById } from "../../data/static-data/game-rules";
+import type { CityData } from "../../../types/city-data";
+import type { BuildingData } from "../../../types/building-status";
+import { updateBuildingInCity } from "../../../data/current-game-data";
+import { getGameRuleValueById } from "../../../data/static-data/game-rules";
 import { BuildingListContent } from "./BuildingListContent";
-import { getBuildingInCity } from "../../data/current-game-data";
+import { getBuildingInCity } from "../../../data/current-game-data";
 
 // TODO: Remove the magic number 10000
 export const BuildingList: React.FC<{ data: CityData }> = ({ data }) => {
@@ -39,7 +39,7 @@ export const BuildingList: React.FC<{ data: CityData }> = ({ data }) => {
   return (
     <div
       id="buildings-list"
-      className="flex flex-col items-center gap-4 w-5xl h-[70vh] overflow-y-scroll rounded-xl border border-slate-700/50 bg-slate-800/40 p-8 backdrop-blur-sm"
+      className="flex flex-col items-center gap-4 w-5xl h-[80vh] overflow-y-scroll rounded-xl border border-slate-700/50 bg-slate-800/40 p-8 backdrop-blur-sm"
     >
       {data.buildings.map((building) => (
         <BuildingListContent

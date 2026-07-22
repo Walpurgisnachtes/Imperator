@@ -1,11 +1,11 @@
 import { i18n } from "@lingui/core";
 import { useLingui } from "@lingui/react/macro";
-import type { BuildingData } from "../../types/building-status";
-import type { ProductionRecipe } from "../../types/production-recipe";
+import type { BuildingData } from "../../../types/building-status";
+import type { ProductionRecipe } from "../../../types/production-recipe";
 import type { MessageDescriptor } from "@lingui/core";
 import type { Dispatch, SetStateAction } from "react";
-import { BuildingRecipe } from "./BuildingRecipe";
-import { ToggleSwitch } from "../ToggleSwitch";
+import { InputOutputRecipe } from "../IORecipe";
+import { ToggleSwitch } from "../../ToggleSwitch";
 
 interface BuildingListContentCollapsedMenuProps {
   building_uid: string;
@@ -74,7 +74,7 @@ export const BuildingListContentCollapsedMenu: React.FC<
               </button>
             ))}
         </div>
-        <BuildingRecipe
+        <InputOutputRecipe
           recipe={building_recipes[building_activeRecipeIndex]}
           productionStrengthCostMultiplier={
             building_productionStrengthCostMultiplier

@@ -7,6 +7,7 @@ import { useSyncExternalStore } from "react";
 import { CityInfoStore } from "../types/city-info-store";
 
 import { useLingui } from "@lingui/react/macro";
+import { CityActionSelector } from "./City/CityActions/CityActionSelector";
 
 export const GameContentContainer: FC = () => {
   const { t } = useLingui();
@@ -29,6 +30,7 @@ export const GameContentContainer: FC = () => {
         information={cityOverview}
       />
       <GameContent context={currentContext} />
+      <CityActionSelector />
     </div>
   );
 };

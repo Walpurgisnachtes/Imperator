@@ -1,7 +1,7 @@
 import { ComingSoonDiv } from "./ComingSoon";
 import type { GameContentHTMLContext } from "../types/game-content-html-context-store";
 import type { FC } from "react";
-import { BuildingList } from "./City/BuildingList";
+import { BuildingList } from "./City/BuildingList/BuildingList";
 import { getCapitalCity } from "../data/current-game-data";
 
 export const GameContent: FC<{ context: GameContentHTMLContext }> = ({
