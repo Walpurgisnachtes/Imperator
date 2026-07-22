@@ -38,8 +38,8 @@ export const BuildingList: React.FC<{ data: CityData }> = ({ data }) => {
 
   return (
     <div
+      className="flex flex-col items-center gap-4 w-5xl overflow-y-scroll"
       id="buildings-list"
-      className="flex flex-col items-center gap-4 w-5xl h-[80vh] overflow-y-scroll rounded-xl border border-slate-700/50 bg-slate-800/40 p-8 backdrop-blur-sm"
     >
       {data.buildings.map((building) => (
         <BuildingListContent

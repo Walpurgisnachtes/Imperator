@@ -8,7 +8,7 @@ export const GameContent: FC<{ context: GameContentHTMLContext }> = ({
   context,
 }) => {
   return (
-    <div id="game-content" className="flex flex-col gap-8">
+    <div id="game-content" className="flex flex-col items-center gap-4 w-5xl h-[80vh] rounded-xl border border-slate-700/50 bg-slate-800/40 p-8 backdrop-blur-sm">
       {(() => {
         switch (context) {
           case "city/building":
