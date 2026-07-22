@@ -59,9 +59,9 @@ export const cityActions: CityAction[] = [
     imageComponent: ResearchButton,
   },
   {
-    actionType: "city/alchemy",
-    actionName: msg`Alchemy`,
-    imageComponent: AlchemyButton,
+    actionType: "city/pandemic",
+    actionName: msg`Pandemic`,
+    imageComponent: PandemicButton,
   },
   {
     actionType: "city/culture",
@@ -79,8 +79,8 @@ export const cityActions: CityAction[] = [
     imageComponent: MagicButton,
   },
   {
-    actionType: "city/pandemic",
-    actionName: msg`Pandemic`,
-    imageComponent: PandemicButton,
+    actionType: "city/alchemy",
+    actionName: msg`Alchemy`,
+    imageComponent: AlchemyButton,
   },
 ];
