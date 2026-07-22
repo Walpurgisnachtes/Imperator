@@ -17,7 +17,9 @@ export const CityActionSelector: FC = () => {
           actionTitle={action.actionName}
           currentSelectedAction={selectedAction}
           onClick={() => setSelectedAction(action.actionType)}
-          occupiesFullWidth={idx === cityActions.length - 1}
+          occupiesFullWidth={
+            idx === cityActions.length - 1 && cityActions.length % 2 !== 0
+          }
         />
       ))}
     </div>
