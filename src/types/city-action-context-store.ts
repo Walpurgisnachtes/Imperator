@@ -1,4 +1,4 @@
-export type GameContentHTMLContext =
+export type CityActionType =
   | "city/building" // Default state
   | "city/trade"
   | "city/military"
@@ -10,12 +10,12 @@ export type GameContentHTMLContext =
   | "city/religion"
   | "city/dialog";
 
-let gameContentHTMLContext: GameContentHTMLContext = "city/building";
+let gameContentHTMLContext: CityActionType = "city/building";
 
 const listeners = new Set<() => void>();
 
-export class GameContentHTMLContextStore {
-  static getSnapshot(): GameContentHTMLContext {
+export class CityActionContextStore {
+  static getSnapshot(): CityActionType {
     return gameContentHTMLContext;
   }
 
@@ -25,7 +25,7 @@ export class GameContentHTMLContextStore {
     return () => listeners.delete(listener);
   }
 
-  static setGameContentHTMLContext(newContext: GameContentHTMLContext) {
+  static setCityActionContext(newContext: CityActionType) {
     gameContentHTMLContext = newContext;
 
     listeners.forEach((listener) => listener());

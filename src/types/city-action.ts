@@ -1,5 +1,5 @@
 import type { FC, SVGProps } from "react";
-import type { GameContentHTMLContext } from "./city-action-context-store";
+import type { CityActionType } from "./city-action-context-store";
 import type { MessageDescriptor } from "@lingui/core";
 import { msg } from "@lingui/core/macro";
 
@@ -14,7 +14,7 @@ import CultureButton from "../assets/theater.svg?react";
 import ReligionButton from "../assets/religion.svg?react";
 
 export interface CityAction {
-  actionName: GameContentHTMLContext;
+  actionName: CityActionType;
   actionTitle: MessageDescriptor;
   imageComponent: FC<SVGProps<SVGSVGElement>>;
 }
