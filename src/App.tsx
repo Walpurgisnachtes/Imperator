@@ -12,7 +12,7 @@ function App() {
 
       <Header />
 
-      <main className="relative flex-1 z-10 px-[5vw] py-[5vh]">
+      <main className="relative flex-1 z-10 my-[5vh] mx-auto">
         <GameContentContainer />
       </main>
     </div>
