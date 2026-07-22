@@ -9,9 +9,12 @@ import PoliticsButton from "../assets/ballot.svg?react";
 import MilitaryButton from "../assets/two-swords-crossing.svg?react";
 import IntelligenceButton from "../assets/spy.svg?react";
 import DiplomacyButton from "../assets/handshake.svg?react";
-import ResearchButton from "../assets/experiment.svg?react";
+import ResearchButton from "../assets/book_ribbon.svg?react";
+import AlchemyButton from "../assets/experiment.svg?react";
 import CultureButton from "../assets/theater.svg?react";
 import ReligionButton from "../assets/religion.svg?react";
+import MagicButton from "../assets/wand_stars.svg?react";
+import PandemicButton from "../assets/skull.svg?react";
 
 export interface CityAction {
   actionType: CityActionType;
@@ -56,6 +59,11 @@ export const cityActions: CityAction[] = [
     imageComponent: ResearchButton,
   },
   {
+    actionType: "city/alchemy",
+    actionName: msg`Alchemy`,
+    imageComponent: AlchemyButton,
+  },
+  {
     actionType: "city/culture",
     actionName: msg`Culture`,
     imageComponent: CultureButton,
@@ -64,5 +72,15 @@ export const cityActions: CityAction[] = [
     actionType: "city/religion",
     actionName: msg`Religion`,
     imageComponent: ReligionButton,
+  },
+  {
+    actionType: "city/magic",
+    actionName: msg`Magic`,
+    imageComponent: MagicButton,
+  },
+  {
+    actionType: "city/pandemic",
+    actionName: msg`Pandemic`,
+    imageComponent: PandemicButton,
   },
 ];

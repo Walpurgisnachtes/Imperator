@@ -6,8 +6,11 @@ export type CityActionType =
   | "city/politics"
   | "city/diplomacy"
   | "city/research"
+  | "city/alchemy"
   | "city/culture"
   | "city/religion"
+  | "city/magic"
+  | "city/pandemic"
   | "city/dialog";
 
 let gameContentHTMLContext: CityActionType = "city/building";
