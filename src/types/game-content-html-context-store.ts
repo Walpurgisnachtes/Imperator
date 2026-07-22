@@ -1,5 +1,13 @@
 export type GameContentHTMLContext =
   | "city/building" // Default state
+  | "city/military"
+  | "city/politics"
+  | "city/diplomacy"
+  | "city/research"
+  | "city/culture"
+  | "city/trade"
+  | "city/religion"
+  | "city/culture"
   | "city/dialog";
 
 let gameContentHTMLContext: GameContentHTMLContext = "city/building";
