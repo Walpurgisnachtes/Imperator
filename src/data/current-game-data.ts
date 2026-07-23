@@ -2,82 +2,71 @@ import { cloneBuilding, getBuildingByName } from "../types/building-registerer";
 import type { BuildingData } from "../types/building-status";
 import type { CityData } from "../types/city-data";
 import type { GameData } from "../types/game-data";
-import { systemMsg } from "./static-data/system-msg";
-import { i18n } from "@lingui/core";
 
-const gameData: GameData = {
+let gameData: GameData = {
   hash: "",
   gameVersion: "",
   cities: [],
   capitalId: "",
 };
 
+const listeners = new Set<() => void>();
+
+export class GameDataStore {
+  static getSnapshot(): GameData {
+    return gameData;
+  }
+
+  static subscribe(listener: () => void) {
+    listeners.add(listener);
+    return () => listeners.delete(listener);
+  }
+
+  static setGameData(newGameData: GameData) {
+    gameData = newGameData;
+    listeners.forEach((listener) => listener());
+  }
+}
+
 // region: Game Data Management
 export function resetGameData(): void {
-  gameData.hash = "";
-  gameData.gameVersion = "";
-  gameData.cities = [];
-  gameData.capitalId = "";
+  GameDataStore.setGameData({
+    hash: "",
+    gameVersion: "",
+    cities: [],
+    capitalId: "",
+  });
 }
 
 export function updateGameData(newGameData: GameData): void {
-  gameData.hash = newGameData.hash;
-  gameData.gameVersion = newGameData.gameVersion;
-  gameData.cities = newGameData.cities;
-  gameData.capitalId = newGameData.capitalId;
+  GameDataStore.setGameData(newGameData);
 }
 
 export function getGameData(): GameData {
   return gameData;
 }
 
-// region: City Management
-export function getCities(): CityData[] {
-  return gameData.cities;
-}
-
-export function getCityByUid(uid: string): CityData | undefined {
-  return gameData.cities.find((city) => city.uid === uid);
-}
-
 export function updateCities(newCities: CityData[]): void {
-  gameData.cities = newCities;
+  GameDataStore.setGameData({
+    ...gameData,
+    cities: newCities,
+  });
 }
 
 export function addCity(newCity: CityData): void {
-  gameData.cities.push(newCity);
-}
-
-export function getCapitalCity(): CityData {
-  let capitalCity = gameData.cities.find(
-    (city) => city.uid === gameData.capitalId,
-  );
-  if (capitalCity) {
-    return capitalCity;
-  } else {
-    console.error(i18n.t(systemMsg.capitalCityNotFound), gameData.cities);
-    return gameData.cities[0];
-  }
+  GameDataStore.setGameData({
+    ...gameData,
+    cities: [...gameData.cities, newCity],
+  });
 }
 
 export function updateCapitalCity(cityId: string): void {
   const city = gameData.cities.find((city) => city.uid === cityId);
   if (city) {
-    gameData.capitalId = cityId;
-  }
-}
-
-// region: Building Management
-export function getBuildingInCity(
-  cityUid: string,
-  buildingUid: string,
-): BuildingData | undefined {
-  const city = gameData.cities.find((city) => city.uid === cityUid);
-  if (city) {
-    return city.buildings.find((building) => building.uid === buildingUid);
-  } else {
-    console.error(`City with UID ${cityUid} not found.`);
-    return undefined;
+    GameDataStore.setGameData({
+      ...gameData,
+      capitalId: cityId,
+    });
   }
 }
 
@@ -115,6 +104,7 @@ export function updateBuildingInCity(
         ...shouldUpdateBuilding,
         ...newBuildingData,
       };
+      listeners.forEach((listener) => listener());
     } else {
       console.error(
         `Building with UID ${buildingUid} not found in city ${cityUid}.`,
@@ -129,16 +119,27 @@ export function addBuildingToCity(
   cityUid: string,
   newBuildingName: string,
   duplicates: number = 1,
-): void {
+  isConstructedImmediately: boolean = false,
+): string[] {
   const cityIndex = gameData.cities.findIndex((city) => city.uid === cityUid);
   if (cityIndex !== -1) {
-    gameData.cities[cityIndex].buildings.push(
-      ...Array.from({ length: duplicates }, () =>
-        cloneBuilding(getBuildingByName(newBuildingName)!),
+    const newBuildings = Array.from({ length: duplicates }, () => {
+      let clonedBuilding = cloneBuilding(getBuildingByName(newBuildingName)!);
+      clonedBuilding.isUnderConstruction = !isConstructedImmediately;
+      return clonedBuilding;
+    });
+    GameDataStore.setGameData({
+      ...gameData,
+      cities: gameData.cities.map((city, index) =>
+        index === cityIndex
+          ? { ...city, buildings: [...city.buildings, ...newBuildings] }
+          : city,
       ),
-    );
+    });
+    return newBuildings.map((building) => building.uid);
   } else {
     console.error(`City with UID ${cityUid} not found.`);
+    return [];
   }
 }
 
@@ -152,7 +153,19 @@ export function removeBuildingFromCity(
       (building) => building.uid === buildingUid,
     );
     if (buildingIndex !== -1) {
-      gameData.cities[cityIndex].buildings.splice(buildingIndex, 1);
+      GameDataStore.setGameData({
+        ...gameData,
+        cities: gameData.cities.map((city, index) =>
+          index === cityIndex
+            ? {
+                ...city,
+                buildings: city.buildings.filter(
+                  (building) => building.uid !== buildingUid,
+                ),
+              }
+            : city,
+        ),
+      });
     } else {
       console.error(
         `Building with UID ${buildingUid} not found in city ${cityUid}.`,

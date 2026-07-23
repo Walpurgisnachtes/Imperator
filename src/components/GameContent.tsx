@@ -2,11 +2,18 @@ import { ComingSoonDiv } from "./ComingSoon";
 import type { CityActionType } from "../types/city-action-context-store";
 import type { FC } from "react";
 import { BuildingList } from "./City/BuildingList/BuildingList";
-import { getCapitalCity } from "../data/current-game-data";
+import { useSyncExternalStore } from "react";
+import { GameDataStore } from "../data/current-game-data";
 
-export const GameContent: FC<{ context: CityActionType }> = ({
-  context,
-}) => {
+export const GameContent: FC<{ context: CityActionType }> = ({ context }) => {
+  const gameData = useSyncExternalStore(
+    GameDataStore.subscribe,
+    GameDataStore.getSnapshot,
+  );
+
+  const capitalCity = gameData.cities.find(
+    (c) => c.uid === gameData.capitalId,
+  )!;
   return (
     <div
       id="game-content"
@@ -15,7 +22,7 @@ export const GameContent: FC<{ context: CityActionType }> = ({
       {(() => {
         switch (context) {
           case "city/building":
-            return <BuildingList data={getCapitalCity()} />;
+            return <BuildingList data={capitalCity} />;
           default:
           case "city/dialog":
             return <ComingSoonDiv />;

@@ -1,7 +1,11 @@
 import React, { useState } from "react";
 import type { CityData } from "../../../types/city-data";
 import type { BuildingData } from "../../../types/building-status";
-import { updateBuildingInCity } from "../../../data/current-game-data";
+import {
+  addBuildingToCity,
+  removeBuildingFromCity,
+  updateBuildingInCity,
+} from "../../../data/current-game-data";
 import { getGameRuleValueById } from "../../../data/static-data/game-rules";
 import { BuildingListContent } from "./BuildingListContent";
 import { getBuildingInCity } from "../../../data/current-game-data";
@@ -28,12 +32,7 @@ export const BuildingList: React.FC<{ data: CityData }> = ({ data }) => {
     >,
   ) => {
     updateBuildingInCity(data.uid, buildingUid, updates);
-    console.log(
-      "Updated building:",
-      getBuildingInCity(data.uid, buildingUid),
-      "with updates:",
-      updates,
-    );
+    console.log("Updated building with updates:", updates);
   };
 
   return (
