@@ -41,12 +41,20 @@ export const BuildingList: React.FC<{ data: CityData }> = ({ data }) => {
     console.log("Add building:", newBuildingUids);
   };
 
+  const activeBuildings = data.buildings.filter(
+    (building) => !building.isUnderConstruction && building.hp !== 0,
+  );
+  const constructingBuildings = data.buildings.filter(
+    (building) => building.isUnderConstruction,
+  );
+
   return (
     <div
       className="flex flex-col items-center gap-4 w-5xl overflow-y-scroll"
       id="buildings-list"
     >
       {data.buildings.map((building) => (
+      {activeBuildings.map((building) => (
         <BuildingListContent
           key={building.uid}
           building={building}
@@ -55,6 +63,10 @@ export const BuildingList: React.FC<{ data: CityData }> = ({ data }) => {
             setExpandedBuildingUid(nextIsExpanded ? building.uid : null);
           }}
           onUpdate={updateBuilding}
+      {constructingBuildings.map((building) => (
+        <BuildingUnderConstructionListContent
+          key={building.uid}
+          building={building}
         />
       ))}
       {canBuildMore && (
