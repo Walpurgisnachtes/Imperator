@@ -8,7 +8,8 @@ import {
 } from "../../../data/current-game-data";
 import { getGameRuleValueById } from "../../../data/static-data/game-rules";
 import { BuildingListContent } from "./BuildingListContent";
-import { getBuildingInCity } from "../../../data/current-game-data";
+import { BuildMoreMenu } from "./BuildMoreMenu";
+import { BuildingUnderConstructionListContent } from "./BuildingUnderConstructionList";
 
 // TODO: Remove the magic number 10000
 export const BuildingList: React.FC<{ data: CityData }> = ({ data }) => {
@@ -35,6 +36,11 @@ export const BuildingList: React.FC<{ data: CityData }> = ({ data }) => {
     console.log("Updated building with updates:", updates);
   };
 
+  const addBuilding = (buildingNameId: string) => {
+    const newBuildingUids = addBuildingToCity(data.uid, buildingNameId);
+    console.log("Add building:", newBuildingUids);
+  };
+
   return (
     <div
       className="flex flex-col items-center gap-4 w-5xl overflow-y-scroll"
@@ -52,11 +58,14 @@ export const BuildingList: React.FC<{ data: CityData }> = ({ data }) => {
         />
       ))}
       {canBuildMore && (
-        <div
-          className={`flex flex-col gap-4 w-4xl rounded-xl border border-slate-700/50 bg-slate-800/40 p-4 backdrop-blur-sm`}
-        >
-          Build More SpaceHolder
-        </div>
+        <BuildMoreMenu
+          cityUid={`${data.uid}`}
+          isExpanded={expandedBuildingUid === "build-more"}
+          onExpandedChange={(nextIsExpanded) => {
+            setExpandedBuildingUid(nextIsExpanded ? "build-more" : null);
+          }}
+          onAddBuilding={addBuilding}
+        />
       )}
     </div>
   );
