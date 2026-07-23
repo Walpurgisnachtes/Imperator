@@ -41,6 +41,7 @@ export function createDefaultBuilding(
     requirements: requirements ?? {},
     level: 1,
     constructionCost: constructionCost ?? 100,
+    currentConstructed: 0,
     maintenanceCost: maintenanceCost ?? 10,
     isUnderConstruction: false,
     hp: hp,

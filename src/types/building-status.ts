@@ -10,6 +10,7 @@ export interface BuildingData {
   requirements?: BuildingRequirement;
   level: number;
   constructionCost: number;
+  currentConstructed: number;
   maintenanceCost: number;
   isUnderConstruction: boolean;
 
