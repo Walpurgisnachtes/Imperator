@@ -23,7 +23,7 @@ export const CityActionButton: FC<CityActionButtonProps> = ({
   currentSelectedAction,
   onClick,
   occupiesFullWidth,
-  imageSize = 16,
+  imageSize = 24,
 }) => {
   return (
     <button
