@@ -16,6 +16,8 @@ export const BuildingList: React.FC<{ data: CityData }> = ({ data }) => {
   const [expandedBuildingUid, setExpandedBuildingUid] = useState<string | null>(
     null,
   );
+  const [doubleConfirmingBuildingUid, setDoubleConfirmingBuildingUid] =
+    useState<string | null>(null);
   const buildingCapacity =
     data.buildingLimit +
     Math.floor(data.population / 10000) *
@@ -41,6 +43,11 @@ export const BuildingList: React.FC<{ data: CityData }> = ({ data }) => {
     console.log("Add building:", newBuildingUids);
   };
 
+  const removeBuilding = (buildingUid: string) => {
+    removeBuildingFromCity(data.uid, buildingUid);
+    console.log("Remove building:", buildingUid);
+  };
+
   const activeBuildings = data.buildings.filter(
     (building) => !building.isUnderConstruction && building.hp !== 0,
   );
@@ -53,7 +60,6 @@ export const BuildingList: React.FC<{ data: CityData }> = ({ data }) => {
       className="flex flex-col items-center gap-4 w-5xl overflow-y-scroll"
       id="buildings-list"
     >
-      {data.buildings.map((building) => (
       {activeBuildings.map((building) => (
         <BuildingListContent
           key={building.uid}
@@ -62,11 +68,27 @@ export const BuildingList: React.FC<{ data: CityData }> = ({ data }) => {
           onExpandedChange={(nextIsExpanded) => {
             setExpandedBuildingUid(nextIsExpanded ? building.uid : null);
           }}
+          isDoubleConfirming={doubleConfirmingBuildingUid === building.uid}
+          onDoubleConfirmingChange={(nextIsDoubleConfirming) => {
+            setDoubleConfirmingBuildingUid(
+              nextIsDoubleConfirming ? building.uid : null,
+            );
+          }}
           onUpdate={updateBuilding}
+          onRemoveBuilding={removeBuilding}
+        />
+      ))}
       {constructingBuildings.map((building) => (
         <BuildingUnderConstructionListContent
           key={building.uid}
           building={building}
+          onRemoveBuilding={removeBuilding}
+          isDoubleConfirming={doubleConfirmingBuildingUid === building.uid}
+          onDoubleConfirmingChange={(nextIsDoubleConfirming) => {
+            setDoubleConfirmingBuildingUid(
+              nextIsDoubleConfirming ? building.uid : null,
+            );
+          }}
         />
       ))}
       {canBuildMore && (
